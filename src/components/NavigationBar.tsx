@@ -12,7 +12,7 @@ export default function NavigationBar() {
         <>
             {/* Mobile Navigation */}
             <button
-                className={`z-3 md:hidden rounded-full bg-platinum p-3 sticky left-83 top-5 shadow-lg`}
+                className={`z-3 md:hidden rounded-full bg-platinum p-3 sticky left-83 top-5 mr-8 shadow-lg `}
                 onClick={handleClick}
             >
                 {isOpen ? (
@@ -69,16 +69,16 @@ export default function NavigationBar() {
             {/* Desktop/Tablet  Navigation */}
             <nav
                 id="navigation-bar"
-                className={`z-2 w-full sticky top-0 bg-platinum py-10 hidden md:flex md:justify-center mb-7`}
+                className={`z-2 w-full sticky top-0 bg-platinum py-2 hidden md:flex md:justify-center`}
             >
-                <ul className="hidden md:flex flex-row justify-center space-x-5">
-                    <li>
+                <ul className="hidden md:flex flex-row justify-center space-x-20">
+                    <li className="cursor-pointer hover:text-gray-300 sm:py-5 sm:hover:text-crimson sm:hover:border-b-10 sm:hover:transition-all sm:hover:duration-250">
                         <Link href={"#experience"}>Experience</Link>
                     </li>
-                    <li>
+                    <li className="cursor-pointer hover:text-gray-300 sm:py-5 sm:hover:text-crimson sm:hover:border-b-10 sm:hover:transition-all sm:hover:duration-250">
                         <Link href={"#projects"}>Projects</Link>
                     </li>
-                    <li>
+                    <li className="cursor-pointer hover:text-gray-300 sm:py-5 sm:hover:text-crimson sm:hover:border-b-10 sm:hover:transition-all sm:hover:duration-250">
                         <Link href={"#techstack"}>Techstack</Link>
                     </li>
                 </ul>
