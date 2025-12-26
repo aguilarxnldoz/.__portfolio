@@ -9,7 +9,7 @@ export default function Home() {
     return (
         <>
             <PageWrapper>
-                <div className="md:flex md:flex-row md:justify-center md:gap-20 md:my-50 md:pt-10">
+                <div className="md:flex md:flex-row md:justify-center md:gap-20 md:my-50 md:pt-5">
                     <div className="flex flex-col-reverse items-center gap-5">
                         <Image
                             className="rounded-full sm:rounded-2xl"
@@ -38,7 +38,7 @@ export default function Home() {
             <MovingBars />
 
             <PageWrapper>
-                <div className="flex flex-col items-center mt-50 md:mt-35">
+                <div className="flex flex-col items-center mt-20 md:mt-35">
                     <section
                         id="experience-section"
                         className="hidden w-full items-center m-auto"
