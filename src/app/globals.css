@@ -1,26 +1,154 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+    --background: var(--platinum);
+    --foreground: var(--dark);
+
+    /* Colour Palette */
+    --platinum: #e5e4e2;
+    --dark: #333333;
+    --crimson: #dc143c;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+    --color-background: var(--background);
+    --color-foreground: var(--foreground);
+    --color-crimson: var(--crimson);
+    --color-dark: var(--dark);
+    --color-platinum: var(--platinum);
+    --font-sans: var(--font-geist-sans);
+    --font-mono: var(--font-geist-mono);
+
+    --animate-up-down: upNDown 0.5s infinite;
+    --animate-flicker-0: flicker0 0.5s infinite;
+    --animate-flicker-1: flicker1 0.5s infinite;
+    --animate-eyes-movement: eyesMovement 3s infinite;
+    --animate-shadow-movement: shadowMovement 0.5s infinite;
+
+    @keyframes upNDown {
+        0%,
+        49% {
+            transform: translateY(0%);
+        }
+        50%,
+        100% {
+            transform: translateY(-7.14%);
+        }
+    }
+
+    @keyframes flicker0 {
+        0%,
+        49% {
+            background-color: red;
+        }
+        50%,
+        100% {
+            background-color: transparent;
+        }
+    }
+
+    @keyframes flicker1 {
+        0%,
+        49% {
+            background-color: transparent;
+        }
+        50%,
+        100% {
+            background-color: red;
+        }
+    }
+
+    @keyframes eyesMovement {
+        0%,
+        49% {
+            transform: translateX(0%);
+        }
+        50%,
+        99% {
+            transform: translateX(50%);
+        }
+        100% {
+            transform: translateX(0%);
+        }
+    }
+
+    @keyframes shadowMovement {
+        0%,
+        49% {
+            opacity: 0.5;
+        }
+        50%,
+        100% {
+            opacity: 0.2;
+        }
+    }
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+    :root {
+        --background: var;
+        --foreground: var(--dark);
+    }
+}
+
+@media screen and (max-width: 648px) {
+    #navigation-bar {
+        display: hidden;
+    }
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+    background: var(--background);
+    color: var(--foreground);
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
+    height: 100%;
+    --color: #e1e1e1;
+    background-color: #f3f3f3;
+    background-image: linear-gradient(0deg, transparent 24%, var(--color) 25%, var(--color) 26%, transparent 27%, transparent 74%, var(--color) 75%, var(--color) 76%, transparent 77%, transparent),
+        linear-gradient(90deg, transparent 24%, var(--color) 25%, var(--color) 26%, transparent 27%, transparent 74%, var(--color) 75%, var(--color) 76%, transparent 77%, transparent);
+    background-size: 80px 80px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    line-height: 1.19;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 1.8rem;
+    line-height: 1.12;
+    font-weight: 600;
+}
+
+h3 {
+    font-size: 1.4rem;
+    line-height: 1.1;
+    font-weight: 600;
+}
+
+p,
+li {
+    font-size: 0.9rem;
+}
+
+#navigation-screen {
+    height: 100vh;
+}
+
+/* animated bars */
+#moving-bars {
+    background: linear-gradient(to right, transparent 0%, transparent 50%, #000000 50%, #000000 100%);
+    background-size: 60px 8px;
+    animation: scrollDashes 1s linear infinite;
+}
+
+@keyframes scrollDashes {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 60px 0;
+    }
 }
