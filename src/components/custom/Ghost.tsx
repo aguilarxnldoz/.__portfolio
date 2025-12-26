@@ -32,14 +32,14 @@ export default function Ghost({className = "w-[140px] h-[140px]"}: {className?: 
                 <div className="col-start-12 row-start-14 animate-flicker-1 bg-crimson"></div>
                 <div className="col-start-13 row-start-14 animate-flicker-1 bg-crimson"></div>
                 <div className="col-start-14 row-start-14 animate-flicker-0 bg-crimson"></div>
-                <div className="col-start-3 col-span-2 row-start-4 row-span-5 bg-white z-10"></div>
-                <div className="col-start-2 col-span-4 row-start-5 row-span-3 bg-white z-10"></div>
-                <div className="col-start-9 col-span-2 row-start-4 row-span-5 bg-white z-10"></div>
-                <div className="col-start-8 col-span-4 row-start-5 row-span-3 bg-white z-10"></div>
-                <div className="col-start-2 col-span-2 row-start-6 row-span-2 bg-black z-20 animate-eyes-movement"></div>
-                <div className="col-start-8 col-span-2 row-start-6 row-span-2 bg-black z-20 animate-eyes-movement"></div>
+                <div className="col-start-3 col-span-2 row-start-4 row-span-5 bg-white "></div>
+                <div className="col-start-2 col-span-4 row-start-5 row-span-3 bg-white "></div>
+                <div className="col-start-9 col-span-2 row-start-4 row-span-5 bg-white "></div>
+                <div className="col-start-8 col-span-4 row-start-5 row-span-3 bg-white "></div>
+                <div className="col-start-2 col-span-2 row-start-6 row-span-2 bg-black  animate-eyes-movement"></div>
+                <div className="col-start-8 col-span-2 row-start-6 row-span-2 bg-black  animate-eyes-movement"></div>
             </div>
-            <div className="bg-black w-full h-full absolute rounded-full transform-[rotateX(80deg)] blur-[20px] top-[80%] animate-shadow-movement -z-10"></div>
+            <div className="bg-black w-full h-full absolute rounded-full transform-[rotateX(80deg)] blur-[20px] top-[80%] animate-shadow-movement "></div>
         </div>
     );
 }
