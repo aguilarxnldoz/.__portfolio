@@ -69,7 +69,7 @@ export default function NavigationBar() {
             {/* Desktop/Tablet  Navigation */}
             <nav
                 id="navigation-bar"
-                className={`w-full sticky top-0 bg-platinum py-10 hidden md:flex md:justify-center mb-7`}
+                className={`z-2 w-full sticky top-0 bg-platinum py-10 hidden md:flex md:justify-center mb-7`}
             >
                 <ul className="hidden md:flex flex-row justify-center space-x-5">
                     <li>

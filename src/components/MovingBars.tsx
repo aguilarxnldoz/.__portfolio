@@ -3,7 +3,7 @@ export default function MovingBars() {
         <>
             <div
                 id="moving-bars"
-                className="max-w-full w-full my-8 h-4 relative"
+                className="max-w-full w-full my-8 h-4"
             ></div>
         </>
     );
