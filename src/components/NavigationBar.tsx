@@ -1,6 +1,7 @@
 "use client";
 import {useState, useEffect} from "react";
 import {Menu, X} from "lucide-react";
+import Link from "next/link";
 
 export default function NavigationBar() {
     const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -38,9 +39,30 @@ export default function NavigationBar() {
                 className={`z-2 fixed top-0 right-0 h-screen w-full bg-platinum transition-transform duration-300 ease-in-out flex flex-col justify-center items-center ${isOpen ? "translate-x-0" : "translate-x-full"}`}
             >
                 <ul className="text-center justify-center flex flex-col gap-5">
-                    <li>Experience</li>
-                    <li>Projects</li>
-                    <li>Techstack</li>
+                    <li>
+                        <Link
+                            href={"#experience"}
+                            onClick={() => setIsOpen(false)}
+                        >
+                            Experience
+                        </Link>
+                    </li>
+                    <li>
+                        <Link
+                            href={"#projects"}
+                            onClick={() => setIsOpen(false)}
+                        >
+                            Projects
+                        </Link>
+                    </li>
+                    <li>
+                        <Link
+                            href={"#techstack"}
+                            onClick={() => setIsOpen(false)}
+                        >
+                            Techstack
+                        </Link>
+                    </li>
                 </ul>
             </nav>
 
@@ -50,9 +72,15 @@ export default function NavigationBar() {
                 className={`w-full sticky top-0 bg-platinum py-10 hidden md:flex md:justify-center mb-7`}
             >
                 <ul className="hidden md:flex flex-row justify-center space-x-5">
-                    <li>Experience</li>
-                    <li>Projects</li>
-                    <li>Techstack</li>
+                    <li>
+                        <Link href={"#experience"}>Experience</Link>
+                    </li>
+                    <li>
+                        <Link href={"#projects"}>Projects</Link>
+                    </li>
+                    <li>
+                        <Link href={"#techstack"}>Techstack</Link>
+                    </li>
                 </ul>
             </nav>
         </>
