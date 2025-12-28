@@ -2,6 +2,7 @@ import type {Metadata} from "next";
 import {JetBrains_Mono} from "next/font/google";
 import "./globals.css";
 import NavigationBar from "@/components/NavigationBar";
+import {Analytics} from "@vercel/analytics/next";
 
 const jetBrainsMono = JetBrains_Mono({
     variable: "--font-jetbrains-mono",
@@ -23,6 +24,7 @@ export default function RootLayout({
             <body className={`${jetBrainsMono.className} min-h-screen antialiased`}>
                 <NavigationBar />
                 {children}
+                <Analytics />
             </body>
         </html>
     );
