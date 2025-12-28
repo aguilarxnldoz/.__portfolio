@@ -77,7 +77,7 @@ export default function NavigationBar() {
                                 className="m-auto"
                             />
                         </Link>
-                        <Link href={"www.linkedin.com/in/naldaguilar"}>
+                        <Link href={"https://linkedin.com/in/naldaguilar"}>
                             <Image
                                 src={"/social-connections/linkedin-icon.svg"}
                                 width={45}
@@ -120,7 +120,7 @@ export default function NavigationBar() {
                                 className="m-auto"
                             />
                         </Link>
-                        <Link href={"www.linkedin.com/in/naldaguilar"}>
+                        <Link href={"https://linkedin.com/in/naldaguilar"}>
                             <Image
                                 src={"/social-connections/linkedin-icon.svg"}
                                 width={45}
