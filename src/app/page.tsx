@@ -21,7 +21,7 @@ export default function Home() {
                     </div>
                     <div>
                         <div className="text-crimson text-center">
-                            <h1 className="text-2xl text-dark mb-6 sm:mb-3 mt-2.5">Nald O. Aguilar</h1>
+                            <h1 className="text-2xl text-dark mb-6 sm:mb-3 mt-2.5 w-full">Nald O. Aguilar</h1>
                             <div className="flex flex-row sm:space-x-5 ">
                                 <Ghost className="w-14 sm:w-10 h-10" />
                                 <h2>Full-stack Web Developer</h2>
