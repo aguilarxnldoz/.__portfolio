@@ -2,6 +2,7 @@
 import {useState, useEffect} from "react";
 import {Menu, X} from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function NavigationBar() {
     const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -36,9 +37,9 @@ export default function NavigationBar() {
 
             <nav
                 id="navigation-screen"
-                className={`z-2 fixed top-0 right-0 h-screen w-full bg-platinum transition-transform duration-300 ease-in-out flex flex-col justify-center items-center ${isOpen ? "translate-x-0" : "translate-x-full"}`}
+                className={`z-2 fixed top-0 right-0 h-screen  w-full bg-platinum transition-transform duration-300 ease-in-out flex flex-col justify-center items-center ${isOpen ? "translate-x-0" : "translate-x-full"}`}
             >
-                <ul className="text-center justify-center flex flex-col gap-5">
+                <ul className="text-center justify-center flex flex-col gap-5 my-20">
                     <li>
                         <Link
                             href={"#experience"}
@@ -64,6 +65,29 @@ export default function NavigationBar() {
                         </Link>
                     </li>
                 </ul>
+                <section className="w-full text-center flex flex-col gap-6">
+                    <h5 className="text-md">Connect with me!</h5>
+                    <div className="flex flex-row gap-16 justify-center">
+                        <Link href={"https://github.com/aguilarxnldoz"}>
+                            <Image
+                                src={"/social-connections/github-icon.svg"}
+                                width={45}
+                                height={45}
+                                alt="GitHub"
+                                className="m-auto"
+                            />
+                        </Link>
+                        <Link href={"www.linkedin.com/in/naldaguilar"}>
+                            <Image
+                                src={"/social-connections/linkedin-icon.svg"}
+                                width={45}
+                                height={45}
+                                alt="LinkedIn"
+                                className="m-auto"
+                            />
+                        </Link>
+                    </div>
+                </section>
             </nav>
 
             {/* Desktop/Tablet  Navigation */}
@@ -72,16 +96,41 @@ export default function NavigationBar() {
                 className={`z-2 w-full sticky top-0 bg-platinum py-2 hidden md:flex md:justify-center`}
             >
                 <ul className="hidden md:flex flex-row justify-center space-x-20">
-                    <li className="cursor-pointer hover:text-gray-300 sm:py-5 sm:hover:text-crimson sm:hover:border-b-10 sm:hover:transition-all sm:hover:duration-250">
+                    <li className="cursor-pointer hover:text-gray-300 sm:py-5 sm:hover:text-crimson sm:hover:border-b-10 sm:hover:transition-all sm:hover:duration-350">
                         <Link href={"#experience"}>Experience</Link>
                     </li>
-                    <li className="cursor-pointer hover:text-gray-300 sm:py-5 sm:hover:text-crimson sm:hover:border-b-10 sm:hover:transition-all sm:hover:duration-250">
+                    <li className="cursor-pointer hover:text-gray-300 sm:py-5 sm:hover:text-crimson sm:hover:border-b-10 sm:hover:transition-all sm:hover:duration-350">
                         <Link href={"#projects"}>Projects</Link>
                     </li>
-                    <li className="cursor-pointer hover:text-gray-300 sm:py-5 sm:hover:text-crimson sm:hover:border-b-10 sm:hover:transition-all sm:hover:duration-250">
+                    <li className="cursor-pointer hover:text-gray-300 sm:py-5 sm:hover:text-crimson sm:hover:border-b-10 sm:hover:transition-all sm:hover:duration-350">
                         <Link href={"#techstack"}>Techstack</Link>
                     </li>
                 </ul>
+                <section className="absolute right-10 top-0 h-full flex items-center">
+                    <div className="flex flex-row gap-5 justify-center">
+                        <Link
+                            href={"https://github.com/aguilarxnldoz"}
+                            className=""
+                        >
+                            <Image
+                                src={"/social-connections/github-icon.svg"}
+                                width={45}
+                                height={45}
+                                alt="GitHub"
+                                className="m-auto"
+                            />
+                        </Link>
+                        <Link href={"www.linkedin.com/in/naldaguilar"}>
+                            <Image
+                                src={"/social-connections/linkedin-icon.svg"}
+                                width={45}
+                                height={45}
+                                alt="LinkedIn"
+                                className="m-auto"
+                            />
+                        </Link>
+                    </div>
+                </section>
             </nav>
         </>
     );
