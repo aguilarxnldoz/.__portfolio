@@ -4,6 +4,7 @@ import MovingBars from "@/components/MovingBars";
 import TechStackContainer from "@/components/TechStack";
 import Ghost from "@/components/custom/Ghost";
 import ProjectsContainer from "@/components/Projects";
+import EmailForm from "@/components/EmailForm";
 
 export default function Home() {
     return (
@@ -60,13 +61,24 @@ export default function Home() {
 
                     <section
                         id="techstack-section"
-                        className="w-full items-center m-auto my-20"
+                        className="w-full items-center m-auto my-10"
                     >
                         <div className="flex flex-row gap-5 sm:gap-10">
                             <Ghost className="w-10 h-10 bottom-2.5" />
                             <h2 id="techstack">Tech Stack</h2>
                         </div>
                         <TechStackContainer />
+                    </section>
+
+                    <section
+                        id="contact-section"
+                        className="w-full items-center m-auto my-10"
+                    >
+                        <div className="flex flex-row gap-5 sm:gap-10">
+                            <Ghost className="w-10 h-10 bottom-2.5" />
+                            <h2 id="contact">Send me a Message!</h2>
+                        </div>
+                        <EmailForm />
                     </section>
                 </div>
             </PageWrapper>
