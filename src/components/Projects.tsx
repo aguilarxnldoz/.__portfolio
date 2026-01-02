@@ -5,7 +5,7 @@ export default function ProjectsContainer() {
         <>
             <div
                 id="projects-container"
-                className="grid sm:grid-cols-2 items-center justify-items-center my-15 gap-2"
+                className="grid sm:grid-cols-2 items-center justify-items-center my-15 gap-5"
             >
                 <ProjectsCard
                     name="Circles"

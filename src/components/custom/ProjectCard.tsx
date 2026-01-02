@@ -24,7 +24,7 @@ export default function ProjectsCard({name, src, alt, description, url, github}:
 
     return (
         <>
-            <div className="w-full bg-platinum p-6 rounded-2xl shadow-crimson shadow-xs border-dark border">
+            <div className="w-full h-auto bg-platinum p-6 rounded-2xl shadow-crimson shadow-xs border-dark border">
                 <div className="flex flex-row gap-2 items-center">
                     <Image
                         src={src}
@@ -34,15 +34,17 @@ export default function ProjectsCard({name, src, alt, description, url, github}:
                     />
                     <h3 className="my-auto">{name}</h3>
                     <button
-                        className="ml-auto md:hidden"
+                        className="ml-auto sm:hidden"
                         onClick={handleClick}
                     >
                         {displayDescription ? <ChevronDown /> : <ChevronRight />}
                     </button>
                 </div>
-                <div className={`${displayDescription ? "block" : "hidden"} h-full max-h-full hover:opacity-90 sm:block my-4 sm:h-30 lg:h-35`}>
+
+                <div className={`${displayDescription ? "block" : "hidden"} h-auto max-h-full hover:opacity-90 sm:block my-4 sm:h-115 md:h-100 lg:h-50 xl:h-40`}>
                     <p>{description}</p>
                 </div>
+
                 <div className="mt-5 sm:mt-4 md:mt-2 flex flex-col gap-2">
                     <div className="flex flex-row gap-1">
                         <Link
