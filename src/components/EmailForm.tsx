@@ -1,12 +1,15 @@
 "use client";
 import {useState, useEffect} from "react";
-import {ContactForm, contactForm} from "@/lib/zod";
+import {contactForm} from "@/lib/zod";
+import LoadingDots from "./custom/LoadingDots";
+import {DOMPurify} from "isomorphic-dompurify";
 
 export default function EmailForm() {
     const [email, setEmail] = useState<string>("");
     const [message, setMessage] = useState<string>("");
     const [formError, setFormError] = useState<string | null>(null);
     const [isSending, setIsSending] = useState<boolean>(false);
+    const [isSent, setIsSent] = useState<boolean>(false);
 
     const handleSubmit = async (event: React.FormEvent) => {
         try {
@@ -32,22 +35,36 @@ export default function EmailForm() {
                 throw new Error("Server Failure");
             }
 
-            const {data} = await response.json();
-            console.log("SUCESSFUL SEND!", data);
-            setIsSending(false);
+            setIsSent(true);
         } catch (e) {
             console.error("Failed to send message", e);
+        } finally {
+            setIsSending(false);
             return;
         }
     };
+
+    useEffect(() => {
+        if (!isSent) return;
+        setTimeout(() => {
+            setIsSent(false);
+        }, 5000);
+        return;
+    }, [isSent]);
 
     const handleEmailChange = (event: React.ChangeEvent<HTMLInputElement>) => setEmail(event.target.value);
     const handleMessageChange = (event: React.ChangeEvent<HTMLTextAreaElement>) => setMessage(event.target.value);
 
     return (
         <>
+            <div
+                id="send-message-success"
+                className={`ease-in-out transition-all duration-500 ${isSent ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-4 pointer-events-none"}`}
+            >
+                <p className="text-center font-bold text-crimson">Your message reached me🖤</p>
+            </div>
             <form onSubmit={handleSubmit}>
-                <div className="bg-linear-to-br from-crimson to-dark mx-auto p-3.5 rounded-md flex flex-col gap-2 md:w-100">
+                <div className="bg-linear-to-br from-crimson to-dark mx-auto p-3.5 rounded-md flex flex-col gap-2 md:w-150 md:mt-10">
                     <input
                         type="text"
                         placeholder="your email"
@@ -63,8 +80,9 @@ export default function EmailForm() {
                     <button
                         type="submit"
                         className="bg-platinum text-center w-40 rounded-md self-end p-2"
+                        disabled={isSending}
                     >
-                        Send!
+                        {isSending ? <LoadingDots /> : "Send"}
                     </button>
                 </div>
             </form>

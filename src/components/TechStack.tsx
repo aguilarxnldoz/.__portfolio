@@ -3,8 +3,8 @@ import ShowStack from "./custom/ShowStack";
 export default function TechStackContainer() {
     return (
         <>
-            <div className="bg-linear-to-tl from-crimson to-dark md:w-300 mx-auto p-3.5 rounded-md mt-10 md:mt-20">
-                <div className="grid grid-cols-3 gap-5 sm:gap-5 sm:items-center bg-white p-2 opacity-90 rounded-md">
+            <div className="bg-linear-to-tl from-crimson to-dark md:w-auto mx-auto p-3.5 rounded-md mt-10 md:mt-20">
+                <div className="grid grid-cols-3 gap-5 sm:gap-5 bg-white p-2 opacity-90 rounded-md">
                     <ShowStack
                         src="techstack-icons/typescript-icon.svg"
                         alt="TypeScript"
