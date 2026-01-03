@@ -31,7 +31,8 @@ export default function EmailForm() {
             });
 
             if (!response.ok) {
-                setFormError(response.statusText as string);
+                const {error} = await response.json().catch(() => null);
+                setFormError(error || (response.statusText as string));
                 throw new Error("Server Failure");
             }
 
@@ -87,8 +88,24 @@ export default function EmailForm() {
                 </div>
             </form>
 
-            <div className={`bg-dark m-auto w-full p-3 rounded-md my-4 border-crimson border-4 text-center ${formError ? "block" : "hidden"}`}>
-                {formError ? <p className="text-white">{JSON.parse(formError)[0]["message"] || formError}</p> : <></>}
+            <div
+                id="error-container"
+                className={`bg-dark m-auto w-full p-3 rounded-md my-4 border-crimson border-4 text-center ${formError ? "block" : "hidden"}`}
+            >
+                {formError ? (
+                    <p className="text-white">
+                        {(() => {
+                            try {
+                                const parsed = JSON.parse(formError);
+                                return parsed?.[0]?.message || formError;
+                            } catch {
+                                return formError;
+                            }
+                        })()}
+                    </p>
+                ) : (
+                    <></>
+                )}
             </div>
         </>
     );

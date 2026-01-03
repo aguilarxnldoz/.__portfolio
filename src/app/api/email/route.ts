@@ -3,9 +3,14 @@ import {resend} from "@/lib/resend";
 import {ContactForm, contactForm} from "@/lib/zod";
 import EmailTemplate from "@/components/EmailTemplate";
 import DOMPurify from "isomorphic-dompurify";
+import {redisClient, redisRateLimiter} from "@/lib/redis";
+import {limitEmails} from "@/lib/limitEmails";
 
 export async function POST(req: NextRequest) {
     try {
+        const rateLimitResponse = await limitEmails(req);
+        if (rateLimitResponse) return rateLimitResponse;
+
         const emailData = await req.json();
         console.log(emailData);
         const validateContact = contactForm.safeParse(emailData);
