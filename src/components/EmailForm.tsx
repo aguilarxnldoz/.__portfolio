@@ -2,7 +2,6 @@
 import {useState, useEffect} from "react";
 import {contactForm} from "@/lib/zod";
 import LoadingDots from "./custom/LoadingDots";
-import {DOMPurify} from "isomorphic-dompurify";
 
 export default function EmailForm() {
     const [email, setEmail] = useState<string>("");
