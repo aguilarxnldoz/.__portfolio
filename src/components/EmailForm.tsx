@@ -23,7 +23,7 @@ export default function EmailForm() {
                 throw error;
             }
 
-            const response = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/email`, {
+            const response = await fetch("/api/email", {
                 method: "POST",
                 headers: {"Content-Type": "application/json"},
                 body: JSON.stringify({email, message}),
