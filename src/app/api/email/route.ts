@@ -31,6 +31,7 @@ export async function POST(req: NextRequest) {
         return NextResponse.json({data: data}, {status: 200});
     } catch (e) {
         console.error("Server Failure: ", e);
-        return NextResponse.json({error: e}, {status: 500});
+        const errorMessage = e instanceof Error ? e.message : "Unknown Server Error";
+        return NextResponse.json({error: errorMessage}, {status: 500});
     }
 }

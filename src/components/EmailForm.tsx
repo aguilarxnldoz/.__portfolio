@@ -30,8 +30,9 @@ export default function EmailForm() {
             });
 
             if (!response.ok) {
-                const {error} = await response.json().catch(() => null);
-                setFormError(error || (response.statusText as string));
+                const data = await response.json().catch(() => null);
+                const errorMessage = data && data.error ? data.error : response.statusText || "Server Failure";
+                setFormError(typeof errorMessage === "string" ? errorMessage : JSON.stringify(errorMessage));
                 throw new Error("Server Failure");
             }
 
