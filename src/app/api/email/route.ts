@@ -3,7 +3,6 @@ import {resend} from "@/lib/resend";
 import {ContactForm, contactForm} from "@/lib/zod";
 import EmailTemplate from "@/components/EmailTemplate";
 import DOMPurify from "isomorphic-dompurify";
-import {redisClient, redisRateLimiter} from "@/lib/redis";
 import {limitEmails} from "@/lib/limitEmails";
 
 export async function POST(req: NextRequest) {
