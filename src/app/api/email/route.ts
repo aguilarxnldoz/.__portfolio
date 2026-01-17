@@ -10,7 +10,6 @@ export async function POST(req: NextRequest) {
         if (rateLimitResponse) return rateLimitResponse;
 
         const emailData = await req.json();
-        console.log(emailData);
         const validateContact = contactForm.safeParse(emailData);
 
         if (validateContact.error) return NextResponse.json({error: validateContact.error, message: "Incorrect Format"}, {status: 400});

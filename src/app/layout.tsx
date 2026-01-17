@@ -13,6 +13,11 @@ const jetBrainsMono = JetBrains_Mono({
 export const metadata: Metadata = {
     title: "Nald Aguilar | 👺",
     description: "Personal Web-portfolio",
+    icons: {
+        icon: "/favicon.ico",
+        shortcut: "/favicon.ico",
+        apple: "/favicon.ico",
+    },
 };
 
 export default function RootLayout({
