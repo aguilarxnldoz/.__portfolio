@@ -18,9 +18,7 @@ interface IProject {
 export default function ProjectsCard({name, src, alt, description, url, github}: IProject) {
     const [displayDescription, setDisplayDescription] = useState<boolean>(false);
 
-    const handleClick = () => {
-        displayDescription ? setDisplayDescription(false) : setDisplayDescription(true);
-    };
+    const handleClick = () => (displayDescription ? setDisplayDescription(false) : setDisplayDescription(true));
 
     return (
         <>

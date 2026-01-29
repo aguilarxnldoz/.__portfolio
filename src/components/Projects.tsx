@@ -21,7 +21,7 @@ export default function ProjectsContainer() {
                     alt="Panday Career Roadmap"
                     url="https://panday.app"
                     github="https://github.com/panday-team/panday"
-                    description="Panday is an AI-powered application that guides individuals into a deeper career in trades. The project displays an interactive roadmap that is personalized to the user's progress in their career/education. This allows PandayAI to provide the user with the necessary resources to carry on their journey in trades, whether they're beginning an education or completing a red seal."
+                    description="Panday is an AI-powered application that guides individuals into a deeper career in trades. The project displays an interactive roadmap that is personalized to the user's progress in their career/education. This allows PandayAI to provide the user with the necessary resources to progress their journey in trades, whether they're beginning an education or completing a red seal."
                 />
             </div>
         </>
