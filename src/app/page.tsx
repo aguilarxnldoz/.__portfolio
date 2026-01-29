@@ -30,7 +30,7 @@ export default function Home() {
                             </div>
                         </div>
                         <div className="text-center sm:w-100 mx-auto bg-platinum p-3 mt-5 rounded-2xl shadow-md">
-                            <p>I am a 2nd year student in Computer Science that has an unhealthy addiction to tech. Using modern technologies, I build, deploy, and scale applications to industry standards.</p>
+                            <p>I am a 2nd year student in Computer Science with an unhealthy addiction to tech. Using modern technologies, I build, deploy, and scale applications to industry standards.</p>
                         </div>
                     </div>
                 </div>
