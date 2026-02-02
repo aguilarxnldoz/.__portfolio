@@ -1,5 +1,5 @@
 "use client";
-import {useState, useEffect} from "react";
+import {useState} from "react";
 import {Menu, X} from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
@@ -87,6 +87,14 @@ export default function NavigationBar() {
                             />
                         </Link>
                     </div>
+                    <div className="m-auto mt-10 itmes-center flex justify-center">
+                        <Image
+                            src={"/my-logo.svg"}
+                            alt="Naldoz Logo"
+                            width={100}
+                            height={100}
+                        />
+                    </div>
                 </section>
             </nav>
 
@@ -95,6 +103,16 @@ export default function NavigationBar() {
                 id="navigation-bar"
                 className={`z-2 w-full sticky top-0 bg-platinum py-2 hidden md:flex md:justify-center`}
             >
+                <section className="absolute left-10 top-0 h-full flex items-center">
+                    <div>
+                        <Image
+                            src={"/my-logo.svg"}
+                            alt="Naldoz Logo"
+                            width={64}
+                            height={64}
+                        />
+                    </div>
+                </section>
                 <ul className="hidden md:flex flex-row justify-center space-x-20">
                     <li className="cursor-pointer hover:text-gray-300 sm:py-5 sm:hover:text-crimson sm:hover:border-b-10 sm:hover:transition-all sm:hover:duration-350">
                         <Link href={"#experience"}>Experience</Link>
