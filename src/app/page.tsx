@@ -5,6 +5,7 @@ import TechStackContainer from "@/components/TechStack";
 import Ghost from "@/components/custom/Ghost";
 import ProjectsContainer from "@/components/Projects";
 import EmailForm from "@/components/EmailForm";
+import ExperienceContainer from "@/components/Experience";
 
 export default function Home() {
     return (
@@ -42,14 +43,18 @@ export default function Home() {
                 <div className="flex flex-col items-center mt-20 md:mt-35">
                     <section
                         id="experience-section"
-                        className="hidden w-full items-center m-auto"
+                        className="w-full items-center m-auto my-10"
                     >
-                        <h2 id="experience">Experience</h2>
+                        <div className="flex flex-row gap-5 sm:gap-10">
+                            <Ghost className="w-10 h-10 bottom-2.5" />
+                            <h2 id="experience">Experience</h2>
+                        </div>
+                        <ExperienceContainer />
                     </section>
 
                     <section
                         id="projects-section"
-                        className="w-full items-center"
+                        className="w-full items-center m-auto my-10"
                     >
                         <div className="flex flex-row gap-5 sm:gap-10">
                             <Ghost className="w-10 h-10 bottom-2.5" />
