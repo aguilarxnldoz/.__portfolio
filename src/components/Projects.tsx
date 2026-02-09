@@ -10,16 +10,6 @@ export default function ProjectsContainer() {
                 className="grid sm:grid-cols-2 items-center justify-items-center my-15 gap-5"
             >
                 <ProjectsCard
-                    name="Circles"
-                    src="/circles-icon.svg"
-                    alt="Circles Social Platform"
-                    url="https://idsp-circle-eight.vercel.app/home"
-                    github="https://github.com/ILHT-IDSP/IDSP-Circle"
-                    description="Circles is a full-stack social media platform designed for collaborative group posting. Users can create or join group accounts (“Circles”) where everyone can share photos and content together in a single feed. Circles makes it easy for teams, clubs, and friends to organize and share memories collectively, with a modern, intuitive interface and seamless group collaboration features."
-                    title="Social Media Application"
-                    images={[`${PROJECT_PATH}circles/circles_sample_1.png`]}
-                />
-                <ProjectsCard
                     name="Panday"
                     src="/panday-icon.svg"
                     alt="Panday Career Roadmap"
@@ -28,10 +18,20 @@ export default function ProjectsContainer() {
                     description="Panday is an AI-powered application that guides individuals into a deeper career in trades. The project displays an interactive roadmap that is personalized to the user's progress in their career/education. This allows PandayAI to provide the user with the necessary resources to carry on their journey in trades, whether they're beginning an education or completing a red seal."
                     title="AI-Powered Career Roadmap"
                     images={[`${PROJECT_PATH}panday/panday_sample_1.png`, `${PROJECT_PATH}panday/panday_sample_2.png`]}
+                    technologies={["NextJS", "TypeScript", "openai GPT-5.1", "Sentence Transformers", "pgvector", "Prisma", "PostgreSQL", "Llama Index"]}
+                />
+                <ProjectsCard
+                    name="Circles"
+                    src="/circles-icon.svg"
+                    alt="Circles Social Platform"
+                    url="https://idsp-circle-eight.vercel.app/home"
+                    github="https://github.com/ILHT-IDSP/IDSP-Circle"
+                    description="Circles is a full-stack, group-first social platform that solves scattered group communication by letting users create or join shared accounts called “Circles.” Instead of one user posting with tagged users or noisy group chats, each Circle has a single collaborative feed and album system where members post, organize memories, and coordinate activities together. This makes it ideal for teams, clubs, families, and friend groups who want one place to build a collective presence with clear ownership, roles, and easy content creation"
+                    title="Social Media Application"
+                    images={[`${PROJECT_PATH}circles/circles_sample_1.png`, `${PROJECT_PATH}circles/circles_sample_2.png`]}
+                    technologies={["NextJS", "TypeScript", "React", "Prisma", "PostgreSQL", "cloudinary"]}
                 />
             </div>
         </>
     );
 }
-// description="Panday is an AI-powered application that guides individuals into a deeper career in trades. The project displays an interactive roadmap that is personalized to the user's progress in their career/education. This allows PandayAI to provide the user with the necessary resources to carry on their journey in trades, whether they're beginning an education or completing a red seal."
-// description="Circles is a full-stack social media platform designed for collaborative group posting. Users can create or join group accounts (“Circles”) where everyone can share photos and content together in a single feed. Circles makes it easy for teams, clubs, and friends to organize and share memories collectively, with a modern, intuitive interface and seamless group collaboration features."

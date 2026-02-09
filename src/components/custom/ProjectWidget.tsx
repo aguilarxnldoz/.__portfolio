@@ -5,6 +5,7 @@ import {X, ChevronLeft, ChevronRight} from "lucide-react";
 import Link from "next/link";
 import {SquareArrowOutUpRight} from "lucide-react";
 import Image from "next/image";
+import TechnologiesCard from "./TechnologiesCard";
 
 interface ProjectWidgetProps {
     name: string;
@@ -15,10 +16,11 @@ interface ProjectWidgetProps {
     github: string;
     images?: string[];
     isOpen: boolean;
+    technologies: string[];
     onClose: () => void;
 }
 
-export default function ProjectWidget({name, title = "Project", description = "Project details go here.", cancelLabel = "Close", url, github, images, isOpen, onClose}: ProjectWidgetProps) {
+export default function ProjectWidget({name, title = "Project", description = "Project details go here.", cancelLabel = "Close", url, github, images, isOpen, onClose, technologies}: ProjectWidgetProps) {
     const dialogRef = useRef<HTMLDivElement | null>(null);
     const [currentSlide, setCurrentSlide] = useState(0);
 
@@ -147,6 +149,13 @@ export default function ProjectWidget({name, title = "Project", description = "P
                                 )}
                             </div>
                         )}
+                    </div>
+                    <div className="flex flex-row flex-wrap my-5 gap-4">
+                        {technologies.map((tech, index) => (
+                            <div key={tech + index++}>
+                                <TechnologiesCard technology={tech} />
+                            </div>
+                        ))}
                     </div>
                 </div>
                 <div className="mt-5 sm:mt-4 md:mt-2 flex flex-col gap-2">
