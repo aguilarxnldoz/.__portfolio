@@ -13,9 +13,10 @@ interface IProject {
     description: string;
     github: string;
     images?: string[];
+    technologies?: string[];
 }
 
-export default function ProjectsCard({name, src, alt, description, title, url, github, images}: IProject) {
+export default function ProjectsCard({name, src, alt, description, title, url, github, images, technologies}: IProject) {
     const [isHovered, setIsHovered] = useState(false);
     const [isWidgetOpen, setIsWidgetOpen] = useState(false);
 
@@ -44,7 +45,7 @@ export default function ProjectsCard({name, src, alt, description, title, url, g
                     }}
                 />
                 {/* Content layer */}
-                <div className={`relative z-10 transition-colors duration-500 ${isHovered ? "text-platinum" : ""}`}>
+                <div className={`relative hover:transition-colors duration-500 ${isHovered ? "text-platinum" : ""}`}>
                     <div className="flex flex-row gap-40 sm:gap-5 lg:justify-between">
                         <div className="flex flex-col">
                             <div className={`icon-display bg-cover flex flex-row gap-2`}>
@@ -74,6 +75,7 @@ export default function ProjectsCard({name, src, alt, description, title, url, g
                 images={images}
                 isOpen={isWidgetOpen}
                 onClose={() => setIsWidgetOpen(false)}
+                technologies={technologies as string[]}
             />
         </>
     );

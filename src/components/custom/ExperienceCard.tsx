@@ -23,7 +23,7 @@ export default function ExperienceCard({companyName, jobType, role, workTerm, de
                 </h4>
                 <h4>{workTerm}</h4>
             </div>
-            <div className="w-250">
+            <div className="w-full max-w-full xl:w-250">
                 <p>{description}</p>
             </div>
         </div>
