@@ -1,9 +1,8 @@
 "use client";
 
 import {useEffect, useRef, useState} from "react";
+import {createPortal} from "react-dom";
 import {X, ChevronLeft, ChevronRight} from "lucide-react";
-import Link from "next/link";
-import {SquareArrowOutUpRight} from "lucide-react";
 import Image from "next/image";
 import TechnologiesCard from "./TechnologiesCard";
 import URLButtons from "./UrlButton";
@@ -26,8 +25,11 @@ export default function ProjectWidget({name, title = "Project", description = "P
     const [currentSlide, setCurrentSlide] = useState(0);
 
     useEffect(() => {
-        // prevent background scroll when dialog is open
-        document.body.style.overflow = isOpen ? "hidden" : "";
+        if (isOpen) {
+            document.body.style.overflow = "hidden";
+        } else {
+            document.body.style.overflow = "";
+        }
         return () => {
             document.body.style.overflow = "";
         };
@@ -42,16 +44,15 @@ export default function ProjectWidget({name, title = "Project", description = "P
         return () => window.removeEventListener("keydown", onKey);
     }, [isOpen, onClose]);
 
-    // focus the dialog when opened for a11y
     useEffect(() => {
         if (isOpen) dialogRef.current?.focus();
     }, [isOpen]);
 
     if (!isOpen) return null;
 
-    return (
+    const modalContent = (
         <div
-            className="fixed inset-0 z-50 flex items-center justify-center"
+            className="fixed inset-0 z-100 flex items-center justify-center"
             role="dialog"
             aria-modal="true"
             aria-label={title}
@@ -107,14 +108,14 @@ export default function ProjectWidget({name, title = "Project", description = "P
                                         <>
                                             <button
                                                 onClick={() => setCurrentSlide((prev) => (prev === 0 ? images.length - 1 : prev - 1))}
-                                                className="absolute left-2 top-1/2 -translate-y-1/2 p-2 rounded-full bg-black/50 text-white hover:bg-black/70 transition-colors"
+                                                className="absolute left-2 top-1/2 -translate-y-1/2 p-2.5 bg-platinum text-black cursor-pointer uppercase hover:shadow-[0.5rem_0.5rem_#DC143C,-0.5rem_-0.5rem_#333333] transition-colors border active:scale-90"
                                                 aria-label="Previous image"
                                             >
                                                 <ChevronLeft size={24} />
                                             </button>
                                             <button
                                                 onClick={() => setCurrentSlide((prev) => (prev === images.length - 1 ? 0 : prev + 1))}
-                                                className="absolute right-2 top-1/2 -translate-y-1/2 p-2 rounded-full bg-black/50 text-white hover:bg-black/70 transition-colors"
+                                                className="absolute right-2 top-1/2 -translate-y-1/2 p-2.5 bg-platinum text-black cursor-pointer uppercase hover:shadow-[0.5rem_0.5rem_#DC143C,-0.5rem_-0.5rem_#333333] transition-colors border active:scale-90"
                                                 aria-label="Next image"
                                             >
                                                 <ChevronRight size={24} />
@@ -123,7 +124,7 @@ export default function ProjectWidget({name, title = "Project", description = "P
                                     )}
 
                                     {/* Image Counter */}
-                                    <div className="absolute top-2 right-2 px-3 py-1 rounded-full bg-black/50 text-white text-sm">
+                                    <div className="absolute top-2 right-2 px-3 py-1 rounded-sm bg-platinum text-black text-sm">
                                         {currentSlide + 1} / {images.length}
                                     </div>
                                 </div>
@@ -135,7 +136,7 @@ export default function ProjectWidget({name, title = "Project", description = "P
                                             <button
                                                 key={idx}
                                                 onClick={() => setCurrentSlide(idx)}
-                                                className={`relative w-20 h-20 flex-shrink-0 rounded-lg overflow-hidden border-2 transition-all ${idx === currentSlide ? "border-crimson" : "border-transparent hover:border-neutral-300"}`}
+                                                className={`relative w-20 h-20 shrink-0 rounded-lg overflow-hidden border-2 transition-all ${idx === currentSlide ? "border-crimson" : "border-transparent hover:border-neutral-300"}`}
                                             >
                                                 <Image
                                                     src={img}
@@ -176,4 +177,6 @@ export default function ProjectWidget({name, title = "Project", description = "P
             </div>
         </div>
     );
+
+    return createPortal(modalContent, document.body);
 }
