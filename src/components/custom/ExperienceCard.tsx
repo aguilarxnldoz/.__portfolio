@@ -15,7 +15,7 @@ interface IExperience {
 
 export default function ExperienceCard({companyName, jobType, role, workTerm, description}: IExperience) {
     return (
-        <div className="p-6 rounded-2xl shadow-crimson shadow-xs border-dark border cursor-pointer overflow-hidden bg-platinum w-full">
+        <div className="p-6 rounded-2xl shadow-crimson shadow-xs border-dark border  overflow-hidden bg-platinum w-full cursor-default">
             <div className="flex flex-col gap-1.5 mb-2.5">
                 <h3>{companyName}</h3>
                 <h4>
