@@ -3,9 +3,9 @@ import ShowStack from "./custom/ShowStack";
 export default function TechStackContainer() {
     return (
         <>
-            <div className="bg-linear-to-tl from-platinum to-dark md:w-auto mx-auto p-3.5 rounded-xl mt-10 md:mt-20 xl:w-210 shadow-md shadow-dark">
-                <div className=" bg-white opacity-80 rounded-xl w-full lg:w-200 m-auto">
-                    <div className="grid grid-cols-3 gap-5 sm:gap-5 m-auto lg:w-200 p-2">
+            <div className="md:w-auto mx-auto p-3.5 mt-10 md:mt-20 xl:w-210 ">
+                <div className="opacity-80 rounded-xl w-full lg:w-200 m-auto">
+                    <div className="grid grid-cols-3 xl:grid-cols-5 gap-5 sm:gap-5 m-auto lg:w-200 p-2">
                         <ShowStack
                             src="techstack-icons/typescript-icon.svg"
                             alt="TypeScript"
@@ -46,6 +46,7 @@ export default function TechStackContainer() {
                             src="techstack-icons/sql-icon.svg"
                             alt="MySQL"
                             title="SQL"
+                            className="pt-2"
                         />
                         <ShowStack
                             src="techstack-icons/redis-icon.svg"
