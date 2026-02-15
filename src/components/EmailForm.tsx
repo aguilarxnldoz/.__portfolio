@@ -53,8 +53,14 @@ export default function EmailForm() {
         return;
     }, [isSent]);
 
-    const handleEmailChange = (event: React.ChangeEvent<HTMLInputElement>) => setEmail(event.target.value);
-    const handleMessageChange = (event: React.ChangeEvent<HTMLTextAreaElement>) => setMessage(event.target.value);
+    const handleEmailChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+        setEmail(event.target.value);
+        if (formError) setFormError(null);
+    };
+    const handleMessageChange = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
+        setMessage(event.target.value);
+        if (formError) setFormError(null);
+    };
 
     return (
         <>
@@ -65,22 +71,24 @@ export default function EmailForm() {
                 <p className="text-center font-bold text-crimson">Your message reached me🖤</p>
             </div>
             <form onSubmit={handleSubmit}>
-                <div className="bg-linear-to-br from-crimson to-dark mx-auto p-3.5 rounded-md flex flex-col gap-2 md:w-150 md:mt-10">
+                <div className="bg-platinum mx-auto p-3.5 rounded-xl flex flex-col gap-2 md:w-150 md:mt-10 shadow-sm shadow-crimson border">
                     <input
                         type="text"
                         placeholder="your email"
                         onChange={handleEmailChange}
-                        className="w-full bg-platinum rounded-md opacity-90 p-2"
+                        className="w-full bg-white rounded-md opacity-70 p-2"
                     />
                     <textarea
                         onChange={handleMessageChange}
-                        className="w-full bg-platinum rounded-md opacity-90 p-2"
+                        className="w-full bg-white rounded-md opacity-70 p-2 resize-none"
                         placeholder="enter your message"
+                        cols={9}
+                        rows={5}
                     ></textarea>
 
                     <button
                         type="submit"
-                        className="bg-platinum text-center w-40 rounded-md self-end p-2"
+                        className="bg-crimson text-platinum text-center w-40 rounded-md self-end p-2"
                         disabled={isSending}
                     >
                         {isSending ? <LoadingDots /> : "Send"}
@@ -90,14 +98,14 @@ export default function EmailForm() {
 
             <div
                 id="error-container"
-                className={`bg-dark m-auto w-full p-3 rounded-md my-4 border-crimson border-4 text-center ${formError ? "block" : "hidden"}`}
+                className={`bg-platinum m-auto xl:w-[25%] p-3 rounded-xl my-4 border-dark border shadow-sm shadow-crimson text-center ${formError ? "block" : "hidden"}`}
             >
                 {formError ? (
-                    <p className="text-white">
+                    <p className="text-crimson font-bold underline">
                         {(() => {
                             try {
                                 const parsed = JSON.parse(formError);
-                                return parsed?.[0]?.message || formError;
+                                return parsed?.[0]?.message + "  😂🫵🗑️💩🤡" || formError + "  😂🫵🗑️💩🤡";
                             } catch {
                                 return formError;
                             }
