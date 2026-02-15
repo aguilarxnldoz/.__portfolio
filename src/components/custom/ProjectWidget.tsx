@@ -6,6 +6,7 @@ import Link from "next/link";
 import {SquareArrowOutUpRight} from "lucide-react";
 import Image from "next/image";
 import TechnologiesCard from "./TechnologiesCard";
+import URLButtons from "./UrlButton";
 
 interface ProjectWidgetProps {
     name: string;
@@ -158,39 +159,11 @@ export default function ProjectWidget({name, title = "Project", description = "P
                         ))}
                     </div>
                 </div>
-                <div className="mt-5 sm:mt-4 md:mt-2 flex flex-col gap-2">
-                    <div className="flex flex-row gap-1">
-                        <Link
-                            href={url}
-                            className="flex flex-row gap-1"
-                        >
-                            <SquareArrowOutUpRight
-                                size={25}
-                                className="hover:text-crimson hover:underline"
-                                strokeWidth={2.25}
-                            />
-                            <p className="my-auto hover:underline hover:text-crimson">Visit!</p>
-                        </Link>
-                    </div>
-                    <div className="flex flex-row-reverse justify-end gap-1">
-                        <p className="my-auto hover:text-crimson">
-                            <a href={github}>Source: {github}</a>
-                        </p>
-                        <svg
-                            className="my-auto hover:text-crimson"
-                            width="25"
-                            height="25"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                        >
-                            <path
-                                d="M23 9V15H22V17H21V19H20V20H19V21H18V22H16V23H15V18H14V17H15V16H17V15H18V14H19V9H18V6H16V7H15V8H14V7H10V8H9V7H8V6H6V9H5V14H6V15H7V16H9V18H7V17H6V16H4V17H5V19H6V20H9V23H8V22H6V21H5V20H4V19H3V17H2V15H1V9H2V7H3V5H4V4H5V3H7V2H9V1H15V2H17V3H19V4H20V5H21V7H22V9H23Z"
-                                fill="black"
-                            />
-                        </svg>
-                    </div>
-                </div>
+
+                <URLButtons
+                    githubUrl={github}
+                    applicationUrl={url}
+                />
 
                 <div className="mt-6 flex justify-end gap-3">
                     <button

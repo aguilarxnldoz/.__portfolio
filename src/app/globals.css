@@ -24,6 +24,19 @@
     --animate-flicker-1: flicker1 0.5s infinite;
     --animate-eyes-movement: eyesMovement 3s infinite;
     --animate-shadow-movement: shadowMovement 0.5s infinite;
+    --animate-float: float 3s ease-in-out infinite;
+
+    @keyframes float {
+        0% {
+            transform: translateY(0px);
+        }
+        50% {
+            transform: translateY(-10px);
+        }
+        100% {
+            transform: translateY(0px);
+        }
+    }
 
     @keyframes upNDown {
         0%,
