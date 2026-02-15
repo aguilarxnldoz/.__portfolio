@@ -15,7 +15,7 @@ export default function ProjectsContainer() {
                     alt="Panday Career Roadmap"
                     url="https://panday.app"
                     github="https://github.com/panday-team/panday"
-                    description="Panday is an AI-powered application that guides individuals into a deeper career in trades. The project displays an interactive roadmap that is personalized to the user's progress in their career/education. This allows PandayAI to provide the user with the necessary resources to carry on their journey in trades, whether they're beginning an education or completing a red seal."
+                    description="Panday is an AI-powered application that guides individuals into a deeper career in trades by supplying the user with resources that are currently scattered throughout the web. The project displays an interactive roadmap that is personalized to the user's progress in their career/education. This allows PandayAI to provide the user with the necessary resources to carry on their journey in trades, whether they're beginning an education or completing a red seal."
                     title="AI-Powered Career Roadmap"
                     images={[`${PROJECT_PATH}panday/panday_sample_1.png`, `${PROJECT_PATH}panday/panday_sample_2.png`]}
                     technologies={["NextJS", "TypeScript", "openai GPT-5.1", "Sentence Transformers", "pgvector", "Prisma", "PostgreSQL", "Llama Index"]}
