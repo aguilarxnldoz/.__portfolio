@@ -30,7 +30,7 @@ export default function ProjectsCard({name, src, alt, description, title, url, g
             >
                 {/* Animated gradient overlay - top left */}
                 <div
-                    className="absolute inset-0 bg-gradient-to-br from-crimson to-transparent transition-all duration-500 ease-out origin-top-left"
+                    className="absolute inset-0 bg-gradient-to-br from-crimson to-transparent transition-all duration-250 ease-out origin-bottom"
                     style={{
                         transform: isHovered ? "scale(1)" : "scale(0)",
                         opacity: isHovered ? 1 : 0,
@@ -38,7 +38,7 @@ export default function ProjectsCard({name, src, alt, description, title, url, g
                 />
                 {/* Animated gradient overlay - bottom right */}
                 <div
-                    className="absolute inset-0 bg-gradient-to-tl from-dark to-transparent transition-all duration-500 ease-out origin-bottom-right"
+                    className="absolute inset-0 bg-gradient-to-tl from-dark to-transparent transition-all duration-150 ease-out origin-top"
                     style={{
                         transform: isHovered ? "scale(1)" : "scale(0)",
                         opacity: isHovered ? 1 : 0,

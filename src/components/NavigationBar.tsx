@@ -105,12 +105,14 @@ export default function NavigationBar() {
             >
                 <section className="absolute left-10 top-0 h-full flex items-center">
                     <div>
+                        {/* <Link href={"/embedding-board"}> */}
                         <Image
                             src={"/my-logo.svg"}
                             alt="Naldoz Logo"
                             width={64}
                             height={64}
                         />
+                        {/* </Link> */}
                     </div>
                 </section>
                 <ul className="hidden md:flex flex-row justify-center space-x-20">

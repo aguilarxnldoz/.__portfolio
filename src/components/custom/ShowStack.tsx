@@ -11,7 +11,7 @@ export default function ShowStack({title, src, alt, className}: {title: string; 
                     width={50}
                     height={50}
                 />
-                <p className={`${className}`}>{title}</p>
+                <p className={`text-dark`}>{title}</p>
             </div>
         </>
     );
