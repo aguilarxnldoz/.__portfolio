@@ -6,7 +6,7 @@ export default function RandomEmbeddingsPage() {
             <PageWrapper>
                 <article
                     id="embedding-board"
-                    className="w-full"
+                    className="w-full my-20"
                 >
                     <h2>My Embedding Board</h2>
                     <div>
