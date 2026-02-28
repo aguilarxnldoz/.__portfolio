@@ -11,7 +11,7 @@ const projects = [
         name: "Panday",
         src: "/panday-icon.svg",
         alt: "Panday Career Roadmap",
-        url: "https://panday.app",
+        url: "https://panday.app/roadmap",
         github: "https://github.com/panday-team/panday",
         description:
             "Panday is an AI-powered application that guides individuals into a deeper career in trades by supplying the user with resources that are currently scattered throughout the web. The project displays an interactive roadmap that is personalized to the user's progress in their career/education. This allows PandayAI to provide the user with the necessary resources to carry on their journey in trades, whether they're beginning an education or completing a red seal.",
