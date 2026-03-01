@@ -9,7 +9,7 @@ export default function RandomEmbeddingsPage() {
                     className="w-full my-20"
                 >
                     <h2>My Embedding Board</h2>
-                    <div>
+                    <div id="bullshit-container">
                         <iframe
                             width="100%"
                             height="166"
@@ -47,6 +47,16 @@ export default function RandomEmbeddingsPage() {
                                 So Rude V2 (feat. Jerry West) (Unreleased)
                             </a>
                         </div>
+
+                        <iframe
+                            data-testid="embed-iframe"
+                            className="rounded-xl"
+                            src="https://open.spotify.com/embed/track/4YnC3EgoRzP14QXVDBuTfF?utm_source=generator&theme=0"
+                            width="100%"
+                            height="152"
+                            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                            loading="lazy"
+                        ></iframe>
                     </div>
                 </article>
             </PageWrapper>
