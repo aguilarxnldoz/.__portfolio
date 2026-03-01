@@ -11,7 +11,7 @@ const projects = [
         name: "Panday",
         src: "/panday-icon.svg",
         alt: "Panday Career Roadmap",
-        url: "https://panday.app",
+        url: "https://panday.app/roadmap",
         github: "https://github.com/panday-team/panday",
         description:
             "Panday is an AI-powered application that guides individuals into a deeper career in trades by supplying the user with resources that are currently scattered throughout the web. The project displays an interactive roadmap that is personalized to the user's progress in their career/education. This allows PandayAI to provide the user with the necessary resources to carry on their journey in trades, whether they're beginning an education or completing a red seal.",
@@ -30,6 +30,17 @@ const projects = [
         title: "Social Media Application",
         images: [`${PROJECT_PATH}circles/circles_sample_1.png`, `${PROJECT_PATH}circles/circles_sample_2.png`],
         technologies: ["NextJS", "TypeScript", "React", "Prisma", "PostgreSQL", "cloudinary"],
+    },
+    {
+        name: "boppy",
+        src: "/boppy-icon.svg",
+        alt: "boppy Audio Visualizer",
+        url: "https://boppy-woad.vercel.app",
+        github: "https://github.com/aguilarxnldoz/boppy.git",
+        description: "boppy is a pure front-end application that renders visuals for music by using the Web Audio and Canvas API",
+        title: "Social Media Application",
+        images: [`${PROJECT_PATH}boppy/boppy_sample_1.png`, `${PROJECT_PATH}boppy/boppy_sample_2.png`],
+        technologies: ["TypeScript", "React", "Vite", "TailwindCSS", "Web Audio API"],
     },
 ];
 

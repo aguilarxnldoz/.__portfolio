@@ -7,7 +7,7 @@ export default function ExperienceContainer() {
         <>
             <div className="items-center flex flex-col my-15">
                 <ExperienceCard
-                    companyName="Vero Ventures - Insurflow"
+                    companyName="Vero Ventures - InsurFlow"
                     jobType="internship"
                     role="Software Engineer"
                     workTerm="January 2026 - Present"

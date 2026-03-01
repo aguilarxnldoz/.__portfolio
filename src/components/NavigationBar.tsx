@@ -1,11 +1,15 @@
 "use client";
-import {useState} from "react";
+import {useState, useEffect} from "react";
+import {usePathname} from "next/navigation";
 import {Menu, X} from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
+import {HomeIcon} from "lucide-react";
 
 export default function NavigationBar() {
     const [isOpen, setIsOpen] = useState<boolean>(false);
+
+    const currentPath = usePathname();
 
     const handleClick = () => (isOpen ? setIsOpen(false) : setIsOpen(true));
 
@@ -101,56 +105,71 @@ export default function NavigationBar() {
             {/* Desktop/Tablet  Navigation */}
             <nav
                 id="navigation-bar"
-                className={`z-2 w-full sticky top-0 bg-platinum py-2 hidden md:flex md:justify-center`}
+                className={`z-2 w-full sticky top-0 bg-platinum py-2 hidden md:flex md:justify-center ${currentPath !== "/" ? "py-4" : ""}`}
             >
                 <section className="absolute left-10 top-0 h-full flex items-center">
                     <div>
-                        {/* <Link href={"/embedding-board"}> */}
-                        <Image
-                            src={"/my-logo.svg"}
-                            alt="Naldoz Logo"
-                            width={64}
-                            height={64}
-                        />
-                        {/* </Link> */}
+                        <Link href={"/embedding-board"}>
+                            <Image
+                                src={"/my-logo.svg"}
+                                alt="Naldoz Logo"
+                                width={64}
+                                height={64}
+                            />
+                        </Link>
                     </div>
                 </section>
-                <ul className="hidden md:flex flex-row justify-center space-x-20">
-                    <li className="cursor-pointer hover:text-gray-300 sm:py-5 sm:hover:text-crimson sm:hover:border-b-10 sm:hover:transition-all sm:hover:duration-350">
-                        <Link href={"#experience"}>Experience</Link>
-                    </li>
-                    <li className="cursor-pointer hover:text-gray-300 sm:py-5 sm:hover:text-crimson sm:hover:border-b-10 sm:hover:transition-all sm:hover:duration-350">
-                        <Link href={"#projects"}>Projects</Link>
-                    </li>
-                    <li className="cursor-pointer hover:text-gray-300 sm:py-5 sm:hover:text-crimson sm:hover:border-b-10 sm:hover:transition-all sm:hover:duration-350">
-                        <Link href={"#techstack"}>Techstack</Link>
-                    </li>
-                </ul>
-                <section className="absolute right-10 top-0 h-full flex items-center">
-                    <div className="flex flex-row gap-5 justify-center">
+
+                {currentPath === "/" ? (
+                    <>
+                        <ul className="hidden md:flex flex-row justify-center space-x-20">
+                            <li className="cursor-pointer hover:text-gray-300 sm:py-5 sm:hover:text-crimson sm:hover:border-b-10 sm:hover:transition-all sm:hover:duration-350">
+                                <Link href={"#experience"}>Experience</Link>
+                            </li>
+                            <li className="cursor-pointer hover:text-gray-300 sm:py-5 sm:hover:text-crimson sm:hover:border-b-10 sm:hover:transition-all sm:hover:duration-350">
+                                <Link href={"#projects"}>Projects</Link>
+                            </li>
+                            <li className="cursor-pointer hover:text-gray-300 sm:py-5 sm:hover:text-crimson sm:hover:border-b-10 sm:hover:transition-all sm:hover:duration-350">
+                                <Link href={"#techstack"}>Techstack</Link>
+                            </li>
+                        </ul>
+                        <section className="absolute right-10 top-0 h-full flex items-center">
+                            <div className="flex flex-row gap-5 justify-center">
+                                <Link
+                                    href={"https://github.com/aguilarxnldoz"}
+                                    className=""
+                                >
+                                    <Image
+                                        src={"/social-connections/github-icon.svg"}
+                                        width={45}
+                                        height={45}
+                                        alt="GitHub"
+                                        className="m-auto"
+                                    />
+                                </Link>
+                                <Link href={"https://linkedin.com/in/naldaguilar"}>
+                                    <Image
+                                        src={"/social-connections/linkedin-icon.svg"}
+                                        width={45}
+                                        height={45}
+                                        alt="LinkedIn"
+                                        className="m-auto"
+                                    />
+                                </Link>
+                            </div>
+                        </section>
+                    </>
+                ) : (
+                    <>
                         <Link
-                            href={"https://github.com/aguilarxnldoz"}
-                            className=""
+                            href={"/"}
+                            className="flex flex-row gap-2 cursor-pointer hover:text-gray-300 sm:py-5 sm:hover:text-crimson sm:hover:border-b-10 sm:hover:transition-all sm:hover:duration-350"
                         >
-                            <Image
-                                src={"/social-connections/github-icon.svg"}
-                                width={45}
-                                height={45}
-                                alt="GitHub"
-                                className="m-auto"
-                            />
+                            <HomeIcon />
+                            <li className="list-none">Home</li>
                         </Link>
-                        <Link href={"https://linkedin.com/in/naldaguilar"}>
-                            <Image
-                                src={"/social-connections/linkedin-icon.svg"}
-                                width={45}
-                                height={45}
-                                alt="LinkedIn"
-                                className="m-auto"
-                            />
-                        </Link>
-                    </div>
-                </section>
+                    </>
+                )}
             </nav>
         </>
     );
