@@ -31,6 +31,17 @@ const projects = [
         images: [`${PROJECT_PATH}circles/circles_sample_1.png`, `${PROJECT_PATH}circles/circles_sample_2.png`],
         technologies: ["NextJS", "TypeScript", "React", "Prisma", "PostgreSQL", "cloudinary"],
     },
+    {
+        name: "boppy",
+        src: "/boppy-icon.svg",
+        alt: "boppy Audio Visualizer",
+        url: "https://boppy-woad.vercel.app",
+        github: "https://github.com/aguilarxnldoz/boppy.git",
+        description: "boppy is a pure front-end application that renders visuals for music by using the Web Audio and Canvas API",
+        title: "Social Media Application",
+        images: [`${PROJECT_PATH}boppy/boppy_sample_1.png`, `${PROJECT_PATH}boppy/boppy_sample_2.png`],
+        technologies: ["TypeScript", "React", "Vite", "TailwindCSS", "Web Audio API"],
+    },
 ];
 
 // Light floating configs - much gentler than techstack
