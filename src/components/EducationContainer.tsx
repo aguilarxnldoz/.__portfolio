@@ -1,5 +1,4 @@
 import EducationPoint from "./custom/education/EducationPoint";
-import StopPoint from "./custom/education/StopPoint";
 import ProgressPoint from "./custom/education/ProgressPoint";
 
 export default function EducationContainer() {
@@ -9,19 +8,19 @@ export default function EducationContainer() {
                 <EducationPoint
                     size={64}
                     school="British Columbia Institute of Technology"
-                    year="2024-Current"
+                    year="2024 - 2026"
                     major="Diploma in Full-stack Web Development"
                     description="Covered technologies in web development such as node.js, react, and python"
                 />
                 <ProgressPoint size={64} />
-                {/* <EducationPoint
+                <EducationPoint
                     size={64}
                     school="British Columbia Institue of Technology"
-                    year="2026-Current"
-                    major="Applied Computer Science (Network Security Applications Development)"
+                    year="Current - 2029"
+                    major="Bachelor's Applied Computer Science (Network Security Applications Development)"
                     description="Learning cybersecurity practices and building secure applications"
                 />
-                <ProgressPoint size={64} /> */}
+                <ProgressPoint size={64} />
                 {/* <StopPoint size={64} /> */}
             </div>
         </>
