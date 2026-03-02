@@ -13,7 +13,7 @@ export default function Home() {
         <>
             <PageWrapper>
                 <div className="md:flex md:flex-row md:justify-center md:gap-20 md:my-50">
-                    <div className="flex flex-col-reverse items-center gap-5">
+                    {/* <div className="flex flex-col-reverse items-center gap-5">
                         <Image
                             className="rounded-full sm:rounded-2xl"
                             src={"/naldouche.jpg"}
@@ -21,7 +21,7 @@ export default function Home() {
                             width={300}
                             height={300}
                         />
-                    </div>
+                    </div> */}
                     <div>
                         <div className="text-crimson text-center">
                             <h1 className="text-2xl text-dark mb-6 sm:mb-3 mt-2.5 w-full">Nald O. Aguilar</h1>
