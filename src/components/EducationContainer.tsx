@@ -17,7 +17,7 @@ export default function EducationContainer() {
                     size={64}
                     school="British Columbia Institue of Technology"
                     year="Current - 2029"
-                    major="Bachelor's Applied Computer Science (Network Security Applications Development)"
+                    major="Bachelor's asdApplied Computer Science (Network Security Applications Development)"
                     description="Learning cybersecurity practices and building secure applications"
                 />
                 <ProgressPoint size={64} />

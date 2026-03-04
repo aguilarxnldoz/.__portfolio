@@ -53,6 +53,17 @@ export default function Home() {
                         <ExperienceContainer />
                     </section>
 
+                    {/* <section
+                        id="case-study-section"
+                        className="w-full items-center m-auto my-10"
+                    >
+                        <div className="flex flex-row gap-5 sm:gap-10 justify-center">
+                            <Ghost className="w-10 h-10 bottom-2.5" />
+                            <h2 id="case-study">Case Study</h2>
+                            <Ghost className="w-10 h-10 bottom-2.5" />
+                        </div>
+                    </section> */}
+
                     <section
                         id="projects-section"
                         className="w-full items-center m-auto my-10"

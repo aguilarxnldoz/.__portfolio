@@ -1497,7 +1497,7 @@ export default function EducationPoint({size = 160, school, year, major, descrip
                     </defs>
                 </svg>
             </motion.div>
-            <div className="flex flex-col text-center sm:text-left m-auto border-b-3 pb-3 border-crimson">
+            <div className="flex flex-col text-left m-0 sm:m-auto border-b-3 pb-3 border-crimson ">
                 {school && <h3 className="font-bold text-lg">{school}</h3>}
                 {year && <span className="text-sm text-gray-500">{year}</span>}
                 {major && <span className="font-medium">{major}</span>}
