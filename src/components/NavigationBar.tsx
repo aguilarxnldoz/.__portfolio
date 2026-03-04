@@ -109,14 +109,21 @@ export default function NavigationBar() {
             >
                 <section className="absolute left-10 top-0 h-full flex items-center">
                     <div>
-                        <Link href={"/embedding-board"}>
+                        {/* <Link href={"/embedding-board"}>
                             <Image
                                 src={"/my-logo.svg"}
                                 alt="Naldoz Logo"
                                 width={64}
                                 height={64}
                             />
-                        </Link>
+                        </Link> */}
+
+                        <Image
+                            src={"/my-logo.svg"}
+                            alt="Naldoz Logo"
+                            width={64}
+                            height={64}
+                        />
                     </div>
                 </section>
 
