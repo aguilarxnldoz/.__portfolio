@@ -7,6 +7,7 @@ import ProjectsContainer from "@/components/Projects";
 import EmailForm from "@/components/EmailForm";
 import ExperienceContainer from "@/components/Experience";
 import EducationContainer from "@/components/EducationContainer";
+import CaseStudy from "@/components/CaseStudy";
 
 export default function Home() {
 	return (
@@ -53,18 +54,22 @@ export default function Home() {
 						</div>
 						<ExperienceContainer />
 					</section>
+					{/* 🍔 🍔 🔥 REMEMBER TO TAKE THIS OUT AFTER THE SEMESTER ENDS !!!!! */}
+					{/* 🍔 🍔 🔥 REMEMBER TO TAKE THIS OUT AFTER THE SEMESTER ENDS !!!!! */}
+					{/* 🍔 🍔 🔥 REMEMBER TO TAKE THIS OUT AFTER THE SEMESTER ENDS !!!!! */}
+					{/* 🍔 🍔 🔥 REMEMBER TO TAKE THIS OUT AFTER THE SEMESTER ENDS !!!!! */}
+					<section
+						id="case-study-section"
+						className="w-full items-center m-auto my-10"
+					>
+						<div className="flex flex-row gap-5 sm:gap-10 justify-center">
+							<Ghost className="w-10 h-10 bottom-2.5" />
+							<h2 id="case-study">Case Study</h2>
+							<Ghost className="w-10 h-10 bottom-2.5" />
+						</div>
 
-					{/* <section
-                        id="case-study-section"
-                        className="w-full items-center m-auto my-10"
-                    >
-                        <div className="flex flex-row gap-5 sm:gap-10 justify-center">
-                            <Ghost className="w-10 h-10 bottom-2.5" />
-                            <h2 id="case-study">Case Study</h2>
-                            <Ghost className="w-10 h-10 bottom-2.5" />
-                        </div>
-                    </section> */}
-
+						<CaseStudy />
+					</section>
 					<section
 						id="projects-section"
 						className="w-full items-center m-auto my-10"
@@ -76,7 +81,6 @@ export default function Home() {
 
 						<ProjectsContainer />
 					</section>
-
 					<section
 						id="techstack-section"
 						className="w-full items-center m-auto my-10"
@@ -87,7 +91,6 @@ export default function Home() {
 						</div>
 						<TechStackContainer />
 					</section>
-
 					<section
 						id="education-section"
 						className="w-full items-center m-auto my-10"
@@ -98,7 +101,6 @@ export default function Home() {
 						</div>
 						<EducationContainer />
 					</section>
-
 					<section
 						id="contact-section"
 						className="w-full items-center m-auto my-10"
