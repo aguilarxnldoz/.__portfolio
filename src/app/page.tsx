@@ -15,7 +15,6 @@ export default function Home() {
 			<PageWrapper>
 				<div className="md:flex md:flex-row md:justify-center md:gap-20 md:my-50">
 					{/* <div className="flex flex-col-reverse items-center gap-5">
-						bruhhhhh
                         <Image
                             className="rounded-full sm:rounded-2xl"
                             src={"/naldouche.jpg"}
