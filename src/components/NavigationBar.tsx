@@ -78,7 +78,7 @@ export default function NavigationBar() {
                                 width={45}
                                 height={45}
                                 alt="GitHub"
-                                className="m-auto"
+                                className="m-auto transition-all duration-300 hover:drop-shadow-[0_0_15px_rgba(220,20,60,0.7)]"
                             />
                         </Link>
                         <Link href={"https://linkedin.com/in/naldaguilar"}>
@@ -87,7 +87,7 @@ export default function NavigationBar() {
                                 width={45}
                                 height={45}
                                 alt="LinkedIn"
-                                className="m-auto"
+                                className="m-auto transition-all duration-300 hover:drop-shadow-[0_0_15px_rgba(220,20,60,0.7)]"
                             />
                         </Link>
                     </div>
