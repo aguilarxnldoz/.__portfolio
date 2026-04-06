@@ -127,6 +127,38 @@ export default function CaseStudyWidget({isOpen, onClose}: CaseStudyWidgetProps)
 						<hr className="border-neutral-300" />
 
 						<section>
+							<h2 className="text-2xl font-bold mb-3">Focus of Role</h2>
+							<p className="mb-4">I owned two high-impact parts of this build: the AI chat architecture and the interaction quality of the roadmap UI.</p>
+
+							<div className="space-y-6">
+								<div>
+									<h3 className="font-bold text-lg mb-2">AI Chatbot Implementation</h3>
+									<p className="mb-2">
+										I led the chatbot implementation with Gemini 2.5 and chose the Vercel AI SDK over a separate Python backend to keep the architecture within one maintainable Next.js stack.
+									</p>
+									<ul className="list-disc pl-6 space-y-1">
+										<li>Built streaming chat behavior in a single application layer</li>
+										<li>Integrated roadmap context so responses stay grounded and relevant</li>
+										<li>Reduced operational overhead and made model iteration faster</li>
+									</ul>
+								</div>
+
+								<div>
+									<h3 className="font-bold text-lg mb-2">UI Animation & Node Interactivity</h3>
+									<p className="mb-2">
+										I was responsible for the interaction and animation system that makes the roadmap feel responsive, while preserving clarity as users navigate a dense node graph.
+									</p>
+									<ul className="list-disc pl-6 space-y-1">
+										<li>Designed node feedback for hover, selection, and navigation states</li>
+										<li>Aligned React state, Motion transitions, and React Flow transforms</li>
+										<li>Eliminated jitter/timing conflicts to deliver smoother interaction</li>
+									</ul>
+								</div>
+							</div>
+						</section>
+
+						<hr className="border-neutral-300" />
+						<section>
 							<h2 className="text-2xl font-bold mb-3">The Challenge</h2>
 							<p className="mb-4">Building an AI-powered career guidance tool presented three core challenges that shaped the development process:</p>
 							<div className="space-y-4">

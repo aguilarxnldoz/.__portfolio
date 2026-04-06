@@ -25,7 +25,7 @@ const projects = [
 		src: "/circles-icon.svg",
 		alt: "Circles Social Platform",
 		url: "https://idsp-circle-eight.vercel.app/home",
-		github: "https://github.com/ILHT-IDSP/IDSP-Circle",
+		github: "https://github.com/aguilarxnldoz/circles",
 		description:
 			'Circles is a full-stack, group-first social platform that solves scattered group communication by letting users create or join shared accounts called "Circles." Instead of one user posting with tagged users or noisy group chats, each Circle has a single collaborative feed and album system where members post, organize memories, and coordinate activities together. This makes it ideal for teams, clubs, families, and friend groups who want one place to build a collective presence with clear ownership, roles, and easy content creation',
 		title: "Social Media Application",
@@ -48,6 +48,17 @@ const projects = [
 		title: "Audio Visualizer",
 		images: [`${PROJECT_PATH}boppy/boppy_sample_1.png`, `${PROJECT_PATH}boppy/boppy_sample_2.png`],
 		technologies: ["TypeScript", "React", "Vite", "TailwindCSS", "Web Audio API"],
+	},
+	{
+		name: "cheesenotcheckers (chess)",
+		src: "/cheesenotcheckers-icon.svg",
+		alt: "cheesenotcheckers-chess",
+		url: "https://cheesenotcheckers.vercel.app",
+		github: "https://github.com/aguilarxnldoz/boppy.git",
+		description: "cheesenotcheckers is a chess game",
+		title: "Chess game",
+		images: [`${PROJECT_PATH}cheesenotcheckers/cnc_sample_1.png`, `${PROJECT_PATH}cheesenotcheckers/cnc_sample_2.png`],
+		technologies: ["TypeScript", "React", "Vite", "TailwindCSS", "chess.js"],
 	},
 ];
 
