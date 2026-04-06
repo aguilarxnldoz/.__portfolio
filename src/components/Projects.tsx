@@ -60,9 +60,20 @@ const projects = [
 		images: [`${PROJECT_PATH}cheesenotcheckers/cnc_sample_1.png`, `${PROJECT_PATH}cheesenotcheckers/cnc_sample_2.png`],
 		technologies: ["TypeScript", "React", "Vite", "TailwindCSS", "chess.js"],
 	},
+	{
+		name: "Python Game",
+		src: "/megaman-icon.svg",
+		alt: "pygame",
+		playUrl: "/games/index.html",
+		github: "https://github.com/aguilarxnldoz/pygame-1.git",
+		description: "a shooter game made with python",
+		title: "Python Game",
+		technologies: ["Python", "pygame", "pygbag"],
+	},
 ];
 
 // Light floating configs - much gentler than techstack
+
 const floatConfigs = [
 	{y: [-2, 2], rotate: [-0.5, 0.5], duration: 4.2},
 	{y: [-1.5, 2.5], rotate: [-0.5, 1], duration: 4.2},
@@ -115,12 +126,13 @@ function ProjectItem({project, index}: {project: (typeof projects)[0]; index: nu
 				name={project.name}
 				src={project.src}
 				alt={project.alt}
-				url={project.url}
+				url={project.url as string}
 				github={project.github}
 				description={project.description}
 				title={project.title}
 				images={project.images}
 				technologies={project.technologies}
+				playUrl={project.playUrl}
 			/>
 		</motion.div>
 	);
