@@ -5,6 +5,7 @@ import {Menu, X} from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import {HomeIcon} from "lucide-react";
+import {scrollToSection} from "@/lib/scrollToSection";
 
 export default function NavigationBar() {
 	const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -12,6 +13,14 @@ export default function NavigationBar() {
 	const currentPath = usePathname();
 
 	const handleClick = () => (isOpen ? setIsOpen(false) : setIsOpen(true));
+
+	const handleSectionNavigation = (sectionId: string, closeMobileMenu = false) => {
+		scrollToSection(sectionId);
+
+		if (closeMobileMenu) {
+			setIsOpen(false);
+		}
+	};
 
 	return (
 		<>
@@ -45,28 +54,31 @@ export default function NavigationBar() {
 			>
 				<ul className="text-center justify-center flex flex-col gap-5 my-20">
 					<li>
-						<Link
-							href={"#experience"}
-							onClick={() => setIsOpen(false)}
+						<button
+							type="button"
+							className="cursor-pointer bg-transparent border-0 p-0 text-inherit"
+							onClick={() => handleSectionNavigation("experience", true)}
 						>
 							Experience
-						</Link>
+						</button>
 					</li>
 					<li>
-						<Link
-							href={"#projects"}
-							onClick={() => setIsOpen(false)}
+						<button
+							type="button"
+							className="cursor-pointer bg-transparent border-0 p-0 text-inherit"
+							onClick={() => handleSectionNavigation("projects", true)}
 						>
 							Projects
-						</Link>
+						</button>
 					</li>
 					<li>
-						<Link
-							href={"#techstack"}
-							onClick={() => setIsOpen(false)}
+						<button
+							type="button"
+							className="cursor-pointer bg-transparent border-0 p-0 text-inherit"
+							onClick={() => handleSectionNavigation("education", true)}
 						>
-							Techstack
-						</Link>
+							Education
+						</button>
 					</li>
 				</ul>
 				<section className="w-full text-center flex flex-col gap-6">
@@ -131,13 +143,31 @@ export default function NavigationBar() {
 					<>
 						<ul className="hidden md:flex flex-row justify-center space-x-20">
 							<li className="cursor-pointer hover:text-gray-300 sm:py-5 sm:hover:text-crimson sm:hover:border-b-10 sm:hover:transition-all sm:hover:duration-350">
-								<Link href={"#experience"}>Experience</Link>
+								<button
+									type="button"
+									className="cursor-pointer bg-transparent border-0 p-0 text-inherit"
+									onClick={() => handleSectionNavigation("experience")}
+								>
+									Experience
+								</button>
 							</li>
 							<li className="cursor-pointer hover:text-gray-300 sm:py-5 sm:hover:text-crimson sm:hover:border-b-10 sm:hover:transition-all sm:hover:duration-350">
-								<Link href={"#projects"}>Projects</Link>
+								<button
+									type="button"
+									className="cursor-pointer bg-transparent border-0 p-0 text-inherit"
+									onClick={() => handleSectionNavigation("projects")}
+								>
+									Projects
+								</button>
 							</li>
 							<li className="cursor-pointer hover:text-gray-300 sm:py-5 sm:hover:text-crimson sm:hover:border-b-10 sm:hover:transition-all sm:hover:duration-350">
-								<Link href={"#techstack"}>Techstack</Link>
+								<button
+									type="button"
+									className="cursor-pointer bg-transparent border-0 p-0 text-inherit"
+									onClick={() => handleSectionNavigation("education")}
+								>
+									Education
+								</button>
 							</li>
 						</ul>
 						<section className="absolute right-10 top-0 h-full flex items-center">

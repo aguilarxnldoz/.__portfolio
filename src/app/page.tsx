@@ -49,7 +49,12 @@ export default function Home() {
 					>
 						<div className="flex flex-row gap-5 sm:gap-10">
 							<Ghost className="w-10 h-10 bottom-2.5" />
-							<h2 id="experience">Experience</h2>
+							<h2
+								id="experience"
+								tabIndex={-1}
+							>
+								Experience
+							</h2>
 						</div>
 						<ExperienceContainer />
 					</section>
@@ -75,7 +80,12 @@ export default function Home() {
 					>
 						<div className="flex flex-row gap-5 sm:gap-10">
 							<Ghost className="w-10 h-10 bottom-2.5" />
-							<h2 id="projects">Projects</h2>
+							<h2
+								id="projects"
+								tabIndex={-1}
+							>
+								Projects
+							</h2>
 						</div>
 
 						<ProjectsContainer />
@@ -86,7 +96,12 @@ export default function Home() {
 					>
 						<div className="flex flex-row gap-5 sm:gap-10 w-auto">
 							<Ghost className="w-10 h-10 bottom-2.5" />
-							<h2 id="techstack">Tech Stack</h2>
+							<h2
+								id="techstack"
+								tabIndex={-1}
+							>
+								Tech Stack
+							</h2>
 						</div>
 						<TechStackContainer />
 					</section>
@@ -96,7 +111,12 @@ export default function Home() {
 					>
 						<div className="flex flex-row gap-5 sm:gap-10 w-auto">
 							<Ghost className="w-10 h-10 bottom-2.5" />
-							<h2 id="techstack">Education</h2>
+							<h2
+								id="education"
+								tabIndex={-1}
+							>
+								Education
+							</h2>
 						</div>
 						<EducationContainer />
 					</section>
