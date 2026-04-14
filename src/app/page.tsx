@@ -8,35 +8,13 @@ import EmailForm from "@/components/EmailForm";
 import ExperienceContainer from "@/components/Experience";
 import EducationContainer from "@/components/EducationContainer";
 import CaseStudy from "@/components/CaseStudy";
+import HeroHeader from "@/components/HeroHeader";
 
 export default function Home() {
 	return (
 		<>
 			<PageWrapper>
-				<div className="md:flex md:flex-row md:justify-center md:gap-20 md:my-50">
-					{/* <div className="flex flex-col-reverse items-center gap-5">
-                        <Image
-                            className="rounded-full sm:rounded-2xl"
-                            src={"/naldouche.jpg"}
-                            alt="Nald Ozem Aguilar"
-                            width={300}
-                            height={300}
-                        />
-                    </div> */}
-					<div>
-						<div className="text-crimson text-center">
-							<h1 className="text-2xl text-dark mb-6 sm:mb-3 mt-2.5 w-full">Nald O. Aguilar</h1>
-							<div className="flex flex-row sm:space-x-5 ">
-								<Ghost className="w-14 sm:w-10 h-10" />
-								<h2>Full-stack Web Developer</h2>
-								<Ghost className="w-14 sm:w-10 h-10" />
-							</div>
-						</div>
-						<div className="text-center sm:w-100 mx-auto bg-platinum p-3 mt-5 rounded-2xl shadow-md">
-							<p>I am a 2nd year student in Computer Science with an unhealthy addiction to tech. Using modern technologies, I build, deploy, and scale applications to industry standards.</p>
-						</div>
-					</div>
-				</div>
+				<HeroHeader />
 			</PageWrapper>
 
 			<MovingBars />
