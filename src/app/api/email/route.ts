@@ -6,13 +6,14 @@ import {limitEmails} from "@/lib/limitEmails";
 
 export async function POST(req: NextRequest) {
     try {
-        const rateLimitResponse = await limitEmails(req);
-        if (rateLimitResponse) return rateLimitResponse;
-
         const emailData = await req.json();
         const validateContact = contactForm.safeParse(emailData);
 
         if (validateContact.error) return NextResponse.json({error: validateContact.error, message: "Incorrect Format"}, {status: 400});
+
+        const rateLimitResponse = await limitEmails(req);
+        if (rateLimitResponse) return rateLimitResponse;
+
         const {email, message} = validateContact.data as ContactForm;
 
         const {data, error} = await resend.emails.send({
