@@ -5,6 +5,8 @@ import {createPortal} from "react-dom";
 import {X} from "lucide-react";
 import Image from "next/image";
 import URLButtons from "./UrlButton";
+import useEmblaCarousel from "embla-carousel-react";
+import {ChevronLeft, ChevronRight} from "lucide-react";
 
 interface CaseStudyWidgetProps {
 	isOpen: boolean;
@@ -13,6 +15,8 @@ interface CaseStudyWidgetProps {
 
 export default function CaseStudyWidget({isOpen, onClose}: CaseStudyWidgetProps) {
 	const dialogRef = useRef<HTMLDivElement | null>(null);
+
+	const [emblaRef, emblaApi] = useEmblaCarousel({loop: true});
 
 	useEffect(() => {
 		if (isOpen) {
@@ -282,60 +286,90 @@ export default function CaseStudyWidget({isOpen, onClose}: CaseStudyWidgetProps)
 
 						<hr className="border-neutral-300" />
 
-						<section>
+						<section id="process-iteration">
 							<h2 className="text-2xl font-bold mb-3">Iteration Timeline</h2>
 							<p className="mb-4">The solution evolved across multiple design and implementation passes rather than a single launch.</p>
-							<div className="grid gap-6">
-								<article className="rounded-xl border border-dark bg-white p-4">
-									<h3 className="font-bold text-lg mb-2">Iteration 1: Structure First</h3>
-									<div className="rounded-lg overflow-hidden border border-neutral-200 mb-3">
-										<Image
-											src="/project-images/panday/panday_sample_5.png"
-											alt="Panday early roadmap layout"
-											width={800}
-											height={450}
-											className="w-full h-auto object-cover"
-										/>
-									</div>
-									<ul className="list-disc pl-5 space-y-1 text-sm">
-										<li>Focused on sequence clarity and keeping progress straight-forward</li>
-										<li>Identified need for stronger context and personalization for each user's situation</li>
-									</ul>
-								</article>
+							
+							<div className="relative">
+								<div className="overflow-hidden rounded-xl" ref={emblaRef}>
+									<div className="flex">
+										{/* Slide 1 */}
+										<div className="flex-[0_0_100%] min-w-0 px-2 sm:px-4">
+											<article className="rounded-xl border border-dark bg-white p-4 h-full flex flex-col">
+												<h3 className="font-bold text-lg mb-2">Iteration 1: Design & Structure First</h3>
+												<div className="rounded-lg overflow-hidden border border-neutral-200 mb-3 shrink-0">
+													<Image
+														src="/project-images/panday/panday_sample_5.png"
+														alt="Panday early roadmap layout"
+														width={800}
+														height={450}
+														className="w-full h-auto object-cover"
+													/>
+												</div>
+												<ul className="list-disc pl-5 space-y-1 text-sm flex-1">
+													<li>Focused on designing a dynamic roadmap and keeping progress tracking straight-forward</li>
+													<li>Identified need for stronger context and personalization for each user's situation</li>
+												</ul>
+											</article>
+										</div>
 
-								<article className="rounded-xl border border-dark bg-white p-4">
-									<h3 className="font-bold text-lg mb-2">Iteration 2: Interactive Flow</h3>
-									<div className="rounded-lg overflow-hidden border border-neutral-200 mb-3">
-										<Image
-											src="/project-images/panday/panday_sample_1.png"
-											alt="Panday interactive node experience"
-											width={800}
-											height={450}
-											className="w-full h-auto object-cover"
-										/>
-									</div>
-									<ul className="list-disc pl-5 space-y-1 text-sm">
-										<li>Added clickable milestones, checklists, and progress states</li>
-										<li>Improved pan/zoom and node feedback for easier navigation</li>
-									</ul>
-								</article>
+										{/* Slide 2 */}
+										<div className="flex-[0_0_100%] min-w-0 px-2 sm:px-4">
+											<article className="rounded-xl border border-dark bg-white p-4 h-full flex flex-col">
+												<h3 className="font-bold text-lg mb-2">Iteration 2: Interactive Flow</h3>
+												<div className="rounded-lg overflow-hidden border border-neutral-200 mb-3 shrink-0">
+													<Image
+														src="/project-images/panday/panday_sample_1.png"
+														alt="Panday interactive node experience"
+														width={800}
+														height={450}
+														className="w-full h-auto object-cover"
+													/>
+												</div>
+												<ul className="list-disc pl-5 space-y-1 text-sm flex-1">
+													<li>Added clickable milestones, checklists, and progress states</li>
+													<li>Improved pan/zoom and node feedback for easier navigation</li>
+												</ul>
+											</article>
+										</div>
 
-								<article className="rounded-xl border border-dark bg-white p-4">
-									<h3 className="font-bold text-lg mb-2">Iteration 3: Trust Layer</h3>
-									<div className="rounded-lg overflow-hidden border border-neutral-200 mb-3">
-										<Image
-											src="/project-images/panday/panday_sample_4.png"
-											alt="Panday source citation cards in AI chat"
-											width={800}
-											height={450}
-											className="w-full h-auto object-cover"
-										/>
+										{/* Slide 3 */}
+										<div className="flex-[0_0_100%] min-w-0 px-2 sm:px-4">
+											<article className="rounded-xl border border-dark bg-white p-4 h-full flex flex-col">
+												<h3 className="font-bold text-lg mb-2">Iteration 3: Trust Layer</h3>
+												<div className="rounded-lg overflow-hidden border border-neutral-200 mb-3 shrink-0">
+													<Image
+														src="/project-images/panday/panday_sample_4.png"
+														alt="Panday source citation cards in AI chat"
+														width={800}
+														height={450}
+														className="w-full h-auto object-cover"
+													/>
+												</div>
+												<ul className="list-disc pl-5 space-y-1 text-sm flex-1">
+													<li>Introduced inline citations with snippet preview and node links</li>
+													<li>Differentiated informational questions from action requests</li>
+												</ul>
+											</article>
+										</div>
 									</div>
-									<ul className="list-disc pl-5 space-y-1 text-sm">
-										<li>Introduced inline citations with snippet preview and node links</li>
-										<li>Differentiated informational questions from action requests</li>
-									</ul>
-								</article>
+								</div>
+
+								{/* Navigation Buttons */}
+								<button 
+									onClick={() => emblaApi?.scrollPrev()} 
+									className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-3 sm:-translate-x-4 bg-white/80 hover:bg-white p-1.5 sm:p-2 rounded-full border border-dark shadow-md z-10"
+									aria-label="Previous slide"
+								>
+									<ChevronLeft className="w-5 h-5" />
+								</button>
+								<button 
+									onClick={() => emblaApi?.scrollNext()} 
+									className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-3 sm:translate-x-4 bg-white/80 hover:bg-white p-1.5 sm:p-2 rounded-full border border-dark shadow-md z-10"
+									aria-label="Next slide"
+								>
+									<ChevronRight className="w-5 h-5" />
+								</button>
 							</div>
 						</section>
 
