@@ -84,7 +84,7 @@ export default function CaseStudyWidget({isOpen, onClose}: CaseStudyWidgetProps)
 					<section className="rounded-xl border border-dark bg-white p-4">
 						<URLButtons
 							githubUrl="https://github.com/panday-team/panday"
-							applicationUrl="https://panday.vercel.app"
+							applicationUrl="https://panday.app/roadmap"
 						/>
 					</section>
 
