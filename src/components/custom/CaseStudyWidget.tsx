@@ -299,7 +299,7 @@ export default function CaseStudyWidget({isOpen, onClose}: CaseStudyWidgetProps)
 									</div>
 									<ul className="list-disc pl-5 space-y-1 text-sm">
 										<li>Focused on sequence clarity and keeping progress straight-forward</li>
-										<li>Identified need for stronger context and personalization to each user's situation</li>
+										<li>Identified need for stronger context and personalization for each user's situation</li>
 									</ul>
 								</article>
 
