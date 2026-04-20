@@ -124,27 +124,25 @@ export default function HeroHeader() {
 		return () => clearTimeout(timer);
 	}, []);
 
-	if (!isClient) {
-		return <div className="min-h-[70vh]"></div>; // Prevent hydration mismatch
-	}
-
 	return (
 		<motion.div
 			style={{y: y1, opacity}}
 			className="relative flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16 pt-5 pb-10 md:py-32 min-h-[70vh]"
 		>
 			{/* Starry Sky Background */}
-			<div className="absolute inset-0 overflow-hidden pointer-events-none -z-20 rounded-3xl">
-				{/* Ambient Twinkling Stars */}
-				{Array.from({length: 40}).map((_, i) => (
-					<AmbientStarComponent key={`ambient-${i}`} />
-				))}
+			{isClient && (
+				<div className="absolute inset-0 overflow-hidden pointer-events-none -z-20 rounded-3xl">
+					{/* Ambient Twinkling Stars */}
+					{Array.from({length: 40}).map((_, i) => (
+						<AmbientStarComponent key={`ambient-${i}`} />
+					))}
 
-				{/* Shooting Stars */}
-				{Array.from({length: 6}).map((_, i) => (
-					<ShootingStarComponent key={`shooting-${i}`} />
-				))}
-			</div>
+					{/* Shooting Stars */}
+					{Array.from({length: 6}).map((_, i) => (
+						<ShootingStarComponent key={`shooting-${i}`} />
+					))}
+				</div>
+			)}
 
 			<div className="flex flex-col items-center md:items-start text-center md:text-left z-10">
 				<motion.div
