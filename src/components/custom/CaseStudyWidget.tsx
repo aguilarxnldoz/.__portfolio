@@ -289,9 +289,12 @@ export default function CaseStudyWidget({isOpen, onClose}: CaseStudyWidgetProps)
 						<section id="process-iteration">
 							<h2 className="text-2xl font-bold mb-3">Iteration Timeline</h2>
 							<p className="mb-4">The solution evolved across multiple design and implementation passes rather than a single launch.</p>
-							
+
 							<div className="relative">
-								<div className="overflow-hidden rounded-xl" ref={emblaRef}>
+								<div
+									className="overflow-hidden rounded-xl"
+									ref={emblaRef}
+								>
 									<div className="flex">
 										{/* Slide 1 */}
 										<div className="flex-[0_0_100%] min-w-0 px-2 sm:px-4">
@@ -327,6 +330,7 @@ export default function CaseStudyWidget({isOpen, onClose}: CaseStudyWidgetProps)
 													/>
 												</div>
 												<ul className="list-disc pl-5 space-y-1 text-sm flex-1">
+													<li>Concluded having the current progress node and the description on the same page.</li>
 													<li>Added clickable milestones, checklists, and progress states</li>
 													<li>Improved pan/zoom and node feedback for easier navigation</li>
 												</ul>
@@ -356,15 +360,15 @@ export default function CaseStudyWidget({isOpen, onClose}: CaseStudyWidgetProps)
 								</div>
 
 								{/* Navigation Buttons */}
-								<button 
-									onClick={() => emblaApi?.scrollPrev()} 
+								<button
+									onClick={() => emblaApi?.scrollPrev()}
 									className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-3 sm:-translate-x-4 bg-white/80 hover:bg-white p-1.5 sm:p-2 rounded-full border border-dark shadow-md z-10"
 									aria-label="Previous slide"
 								>
 									<ChevronLeft className="w-5 h-5" />
 								</button>
-								<button 
-									onClick={() => emblaApi?.scrollNext()} 
+								<button
+									onClick={() => emblaApi?.scrollNext()}
 									className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-3 sm:translate-x-4 bg-white/80 hover:bg-white p-1.5 sm:p-2 rounded-full border border-dark shadow-md z-10"
 									aria-label="Next slide"
 								>
