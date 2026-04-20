@@ -330,7 +330,6 @@ export default function CaseStudyWidget({isOpen, onClose}: CaseStudyWidgetProps)
 													/>
 												</div>
 												<ul className="list-disc pl-5 space-y-1 text-sm flex-1">
-													<li>Concluded having the current progress node and the description on the same page.</li>
 													<li>Added clickable milestones, checklists, and progress states</li>
 													<li>Improved pan/zoom and node feedback for easier navigation</li>
 												</ul>
@@ -351,6 +350,7 @@ export default function CaseStudyWidget({isOpen, onClose}: CaseStudyWidgetProps)
 													/>
 												</div>
 												<ul className="list-disc pl-5 space-y-1 text-sm flex-1">
+													<li>Concluded having the current progress node and the description on the same page.</li>
 													<li>Introduced inline citations with snippet preview and node links</li>
 													<li>Differentiated informational questions from action requests</li>
 												</ul>
