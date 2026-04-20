@@ -82,8 +82,6 @@ export default function CaseStudyWidget({isOpen, onClose}: CaseStudyWidgetProps)
 
 				<div className="mt-8 space-y-8">
 					<section className="rounded-xl border border-dark bg-white p-4">
-						<h2 className="text-2xl font-bold mb-2">Project Links</h2>
-						<p className="text-sm text-neutral-700 mb-2">Live application and repository are placed at the top for quick review.</p>
 						<URLButtons
 							githubUrl="https://github.com/panday-team/panday"
 							applicationUrl="https://panday.vercel.app"
