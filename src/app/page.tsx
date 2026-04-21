@@ -7,7 +7,6 @@ import ProjectsContainer from "@/components/Projects";
 import EmailForm from "@/components/EmailForm";
 import ExperienceContainer from "@/components/Experience";
 import EducationContainer from "@/components/EducationContainer";
-import CaseStudy from "@/components/CaseStudy";
 import HeroHeader from "@/components/HeroHeader";
 
 export default function Home() {
@@ -36,18 +35,6 @@ export default function Home() {
 						</div>
 						<ExperienceContainer />
 					</section>
-					{/* <section */}
-					{/* 	id="case-study-section" */}
-					{/* 	className="w-full items-center m-auto my-10" */}
-					{/* > */}
-					{/* 	<div className="flex flex-row gap-5 sm:gap-10 justify-center"> */}
-					{/* 		<Ghost className="w-10 h-10 bottom-2.5" /> */}
-					{/* 		<h2 id="case-study">Case Study</h2> */}
-					{/* 		<Ghost className="w-10 h-10 bottom-2.5" /> */}
-					{/* 	</div> */}
-					{/**/}
-					{/* 	<CaseStudy /> */}
-					{/* </section> */}
 					<section
 						id="projects-section"
 						className="w-full items-center m-auto my-10"
