@@ -151,7 +151,7 @@ export default function HeroHeader() {
 					transition={{duration: 0.6, delay: 0.2}}
 					className="text-crimson"
 				>
-					<h1 className="text-4xl md:text-6xl font-bold text-dark mb-4 tracking-tight md:text-center">Nald O. Aguilar</h1>
+					<h1 className="text-4xl md:text-6xl font-bold text-dark mb-4 tracking-tight md:text-center">Nald Aguilar</h1>
 					<div className="flex items-center justify-center md:justify-start gap-4 mb-6">
 						<Ghost className="w-10 h-8 md:w-10 md:h-10 text-crimson animate-bounce" />
 						<h2 className="text-xl md:text-2xl font-medium text-crimson/80">Full-stack Web Developer</h2>
