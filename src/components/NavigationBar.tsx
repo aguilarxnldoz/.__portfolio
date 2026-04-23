@@ -26,7 +26,7 @@ export default function NavigationBar() {
 		<>
 			{/* Mobile Navigation */}
 			<button
-				className={`z-3 md:hidden rounded-full bg-platinum p-3 sticky left-83 top-5 mr-8 shadow-lg `}
+				className={`z-50 md:hidden rounded-full bg-platinum p-3 sticky left-83 top-5 mr-8 shadow-lg `}
 				onClick={handleClick}
 			>
 				{isOpen ? (
@@ -50,7 +50,7 @@ export default function NavigationBar() {
 
 			<nav
 				id="navigation-screen"
-				className={`z-2 fixed top-0 right-0 h-screen  w-full bg-platinum transition-transform duration-300 ease-in-out flex flex-col justify-center items-center ${isOpen ? "translate-x-0" : "translate-x-full"}`}
+				className={`z-40 fixed top-0 right-0 h-screen  w-full bg-platinum transition-transform duration-300 ease-in-out flex flex-col justify-center items-center ${isOpen ? "translate-x-0" : "translate-x-full"}`}
 			>
 				<ul className="text-center justify-center flex flex-col gap-5 my-20">
 					<li>
@@ -117,7 +117,7 @@ export default function NavigationBar() {
 			{/* Desktop/Tablet  Navigation */}
 			<nav
 				id="navigation-bar"
-				className={`z-2 w-full sticky top-0 bg-platinum py-2 hidden md:flex md:justify-center ${currentPath !== "/" ? "py-4" : ""}`}
+				className={`z-40 w-full sticky top-0 bg-platinum py-2 hidden md:flex md:justify-center ${currentPath !== "/" ? "py-4" : ""}`}
 			>
 				<section className="absolute left-10 top-0 h-full flex items-center">
 					<div>
