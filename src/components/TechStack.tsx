@@ -58,6 +58,7 @@ const techStack = [
 	{src: "techstack-icons/css-icon.svg", alt: "CSS3", title: "CSS"},
 	{src: "techstack-icons/git-icon.svg", alt: "git", title: "git"},
 	{src: "techstack-icons/python-icon.svg", alt: "Python", title: "Python"},
+	{src: "techstack-icons/c-icon.svg", alt: "C Programming Language", title: "C"},
 	{src: "techstack-icons/sql-icon.svg", alt: "MySQL", title: "SQL", className: "pt-2"},
 	{src: "techstack-icons/postgres-icon.svg", alt: "PostgreSQL", title: "PostgreSQL"},
 	{src: "techstack-icons/redis-icon.svg", alt: "Redis", title: "Redis"},
