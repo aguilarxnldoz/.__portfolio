@@ -166,7 +166,7 @@ export default function HeroHeader() {
 					className="bg-platinum/50 backdrop-blur-sm p-6 md:p-8 rounded-3xl shadow-lg border border-platinum max-w-lg"
 				>
 					<p className="text-base md:text-lg text-dark/90 leading-relaxed">
-						I am a 2nd year student in Computer Science with an unhealthy addiction to tech. Using modern technologies, I build, deploy, and scale applications to industry standards.
+						I am a 2nd year student in Computer Science with an unhealthy addiction to tech. Using modern technologies, I build, deploy, and scale applications and design systems to industry standards.
 					</p>
 				</motion.div>
 			</div>
