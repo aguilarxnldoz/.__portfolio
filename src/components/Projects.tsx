@@ -50,17 +50,6 @@ const projects = [
 		technologies: ["TypeScript", "React", "Vite", "TailwindCSS", "Web Audio API"],
 	},
 	{
-		name: "cheesenotcheckers (chess)",
-		src: "/cheesenotcheckers-icon.svg",
-		alt: "cheesenotcheckers-chess",
-		url: "https://cheesenotcheckers.vercel.app",
-		github: "https://github.com/aguilarxnldoz/boppy.git",
-		description: "cheesenotcheckers is a chess game",
-		title: "Chess game",
-		images: [`${PROJECT_PATH}cheesenotcheckers/cnc_sample_1.png`, `${PROJECT_PATH}cheesenotcheckers/cnc_sample_2.png`],
-		technologies: ["TypeScript", "React", "Vite", "TailwindCSS", "chess.js"],
-	},
-	{
 		name: "Python Game",
 		src: "/megaman-icon.svg",
 		alt: "pygame",
