@@ -6,7 +6,6 @@ import {useRef} from "react";
 
 const PROJECT_PATH = "/project-images/";
 
-// MAKE SURE TO BRING BACK PANDAY INTO PROJECTS AFTER SEMESTER ENDS!!! 🍔🍔🍔🔥
 const projects = [
 	{
 		name: "Panday",
